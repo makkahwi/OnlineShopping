@@ -16,8 +16,8 @@ export default function Header() {
         </CSidebarBrand>
 
         <CHeaderNav className="d-none d-md-flex me-auto">
-          {navigation.map(link => (
-            <CNavItem>
+          {navigation.map((link, i) => (
+            <CNavItem key={i}>
               <CNavLink to={link.to}>
                 {link.name}
               </CNavLink>
