@@ -1,22 +1,21 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
-  "version": "4.3.1",
-  "description": "CoreUI Free React Admin Template",
+  "name": "online-shopping-web-app-frontend",
+  "version": "0.1.0",
+  "description": "'Agents On Cloud' Technical Assessment for 'React Developer' postion",
   "homepage": ".",
-  "bugs": {
-    "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
-  },
   "license": "MIT",
-  "author": "The CoreUI Team (https://github.com/orgs/coreui/people)",
+  "author": {
+    "name": "Suahib Ahmad",
+    "url": "https://Suhaib.dev",
+    "github": "https://github.com/makkahwi",
+    "facebook": "https://facebook.com/makkahwi",
+    "linkedin": "https://linkedin.com/in/makkahwi",
+    "email": "SuhaibAhmadAi@hotmail.com"
+  },
   "scripts": {
     "build": "react-scripts build",
     "changelog": "auto-changelog --starting-version 4.3.1 --commit-limit false --hide-credit",
     "eject": "react-scripts eject",
-    "lint": "eslint \"src/**/*.js\"",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
@@ -50,9 +49,6 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
     "auto-changelog": "~2.4.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "2.6.2",
     "react-scripts": "5.0.1",
     "sass": "^1.52.1",
     "web-vitals": "^2.1.4"
@@ -60,5 +56,17 @@
   "engines": {
     "node": ">=10",
     "npm": ">=6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
