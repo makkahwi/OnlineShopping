@@ -64,8 +64,8 @@ export default function Stores({ setStore }) {
 
         <CCardBody>
           <CRow>
-            {stores.map(store => (
-              <CCol md={4} className="px-5 py-3">
+            {stores.map((store, i) => (
+              <CCol md={4} className="px-5 py-3" key={i}>
                 <h6>
                   {store.name}
                 </h6>

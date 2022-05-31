@@ -80,7 +80,7 @@ export default function Store({ store, setStore }) {
         <CCardBody>
           <CRow>
             {store.products.map((product, i) => (
-              <CCol md={4} className="text-center">
+              <CCol md={4} className="text-center" key={i}>
                 <a href='#'>
                   <CImage src={product.image} width={150} />
                   <br />

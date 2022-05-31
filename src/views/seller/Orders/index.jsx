@@ -65,15 +65,15 @@ export default function Orders() {
             </CTableHead>
 
             <CTableBody>
-              {orders.map((listing, i) => (
+              {orders.map((order, i) => (
                 <CTableRow className='align-middle' key={i}>
-                  <CTableHeaderCell>{listing.id}</CTableHeaderCell>
+                  <CTableHeaderCell>{order.id}</CTableHeaderCell>
 
-                  <CTableDataCell>#{listing.customer}</CTableDataCell>
+                  <CTableDataCell>#{order.customer}</CTableDataCell>
 
-                  <CTableDataCell>${listing.value}</CTableDataCell>
+                  <CTableDataCell>${order.value}</CTableDataCell>
 
-                  <CTableDataCell>{listing.status}</CTableDataCell>
+                  <CTableDataCell>{order.status}</CTableDataCell>
 
                   <CTableDataCell>
                     <CButtonGroup size="sm">
@@ -81,7 +81,7 @@ export default function Orders() {
                         content="View"
                         placement="top"
                       >
-                        <CButton color="info" onClick={() => actionsClick(listing, "View")}>
+                        <CButton color="info" onClick={() => actionsClick(order, "View")}>
                           <CIcon className='text-light' icon={cilNewspaper} />
                         </CButton>
                       </CTooltip>
@@ -90,7 +90,7 @@ export default function Orders() {
                         content="Mark as Shipped Out"
                         placement="top"
                       >
-                        <CButton color="success" onClick={() => actionsClick(listing, "Shipped")}>
+                        <CButton color="success" onClick={() => actionsClick(order, "Shipped")}>
                           <CIcon className='text-white' icon={cilCheckAlt} />
                         </CButton>
                       </CTooltip>
@@ -99,7 +99,7 @@ export default function Orders() {
                         content="Mark as Canceled"
                         placement="top"
                       >
-                        <CButton color="danger" onClick={() => actionsClick(listing, "Cancelled")}>
+                        <CButton color="danger" onClick={() => actionsClick(order, "Cancelled")}>
                           <CIcon className='text-white' icon={cilX} />
                         </CButton>
                       </CTooltip>

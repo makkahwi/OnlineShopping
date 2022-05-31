@@ -25,16 +25,15 @@ export default function Listings() {
   };
 
   const modelContent = () => (<>
-    {Object.keys(detailsData).map(key => key == "image" ? (
+    {Object.keys(detailsData).map((key, i) => key == "image" ? (
       <>
-        <CInputGroup className="mb-3">
+        <CInputGroup className="mb-3" key={i}>
           <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
           <CImage src={detailsData[key]} width={250} />
         </CInputGroup>
-
       </>
     ) : key != "id" && (
-      <CInputGroup className="mb-3">
+      <CInputGroup className="mb-3" key={i}>
         <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
         <CFormInput value={detailsData[key]} disabled={action != "Update"} />
       </CInputGroup>
@@ -67,8 +66,8 @@ export default function Listings() {
             </CTableHead>
 
             <CTableBody>
-              {listings.map(listing => (
-                <CTableRow className='align-middle'>
+              {listings.map((listing, i) => (
+                <CTableRow className='align-middle' key={i}>
                   <CTableHeaderCell>{listing.id}</CTableHeaderCell>
 
                   <CTableDataCell>
