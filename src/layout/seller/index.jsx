@@ -1,7 +1,7 @@
 import React from 'react'
-import { Content, Sidebar, Footer, Header } from './components'
+import { Content, Footer, Header, Sidebar } from './components'
 
-const DefaultLayout = () => {
+export default function SellerLayout() {
   return (
     <div>
       <Sidebar />
@@ -15,5 +15,3 @@ const DefaultLayout = () => {
     </div>
   )
 }
-
-export default DefaultLayout

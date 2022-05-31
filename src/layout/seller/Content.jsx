@@ -1,20 +1,19 @@
-import React, { Suspense } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
 import { CContainer, CSpinner } from '@coreui/react'
-
-// routes config
-import routes from '../../routes'
+import React, { Suspense, memo } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import routes from '../../routes/seller'
+import Loading from '../../components/loading'
 
 const Content = () => {
   return (
     <CContainer lg>
-      <Suspense fallback={<CSpinner color="primary" />}>
+      <Suspense fallback={<Loading />}>
         <Routes>
-          {routes.map((route, idx) => {
+          {routes.map((route, i) => {
             return (
               route.element && (
                 <Route
-                  key={idx}
+                  key={i}
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
@@ -30,4 +29,4 @@ const Content = () => {
   )
 }
 
-export default React.memo(Content)
+export default memo(Content)

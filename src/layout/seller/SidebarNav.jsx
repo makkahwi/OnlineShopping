@@ -1,11 +1,11 @@
-import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-import PropTypes from 'prop-types'
-
 import { CBadge } from '@coreui/react'
+import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export const SidebarNav = ({ items }) => {
-  const location = useLocation()
+  const location = useLocation();
+
   const navLink = (name, icon, badge) => {
     return (
       <>
@@ -18,11 +18,12 @@ export const SidebarNav = ({ items }) => {
         )}
       </>
     )
-  }
+  };
 
   const navItem = (item, index) => {
-    const { component, name, badge, icon, ...rest } = item
-    const Component = component
+    const { component, name, badge, icon, ...rest } = item;
+    const Component = component;
+
     return (
       <Component
         {...(rest.to &&
@@ -35,10 +36,12 @@ export const SidebarNav = ({ items }) => {
         {navLink(name, icon, badge)}
       </Component>
     )
-  }
+  };
+
   const navGroup = (item, index) => {
-    const { component, name, icon, to, ...rest } = item
-    const Component = component
+    const { component, name, icon, to, ...rest } = item;
+    const Component = component;
+
     return (
       <Component
         idx={String(index)}
@@ -52,13 +55,13 @@ export const SidebarNav = ({ items }) => {
         )}
       </Component>
     )
-  }
+  };
 
   return (
-    <React.Fragment>
+    <Fragment>
       {items &&
         items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
-    </React.Fragment>
+    </Fragment>
   )
 }
 

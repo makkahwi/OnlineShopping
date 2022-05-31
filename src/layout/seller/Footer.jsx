@@ -1,5 +1,5 @@
-import React from 'react'
 import { CFooter } from '@coreui/react'
+import React, { memo } from 'react'
 
 const Footer = () => {
   return (
@@ -12,6 +12,7 @@ const Footer = () => {
         </a>
         <span className="ms-1">&copy; 2022</span>
       </div>
+
       <div className="ms-auto">
         Based on template of
         {" "}
@@ -23,4 +24,4 @@ const Footer = () => {
   )
 }
 
-export default React.memo(Footer)
+export default memo(Footer)

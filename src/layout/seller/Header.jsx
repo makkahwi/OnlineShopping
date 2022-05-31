@@ -1,4 +1,4 @@
-import { cilBell, cilAccountLogout, cilList, cilMenu } from '@coreui/icons'
+import { cilAccountLogout, cilBell, cilList, cilMenu } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import {
   CContainer,
@@ -10,7 +10,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+export default function Header() {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
@@ -25,7 +25,7 @@ const Header = () => {
         </CHeaderToggler>
 
         <CHeaderBrand className="mx-auto d-md-none" to="/">
-          Logo
+          VeganMegan
         </CHeaderBrand>
 
         <CHeaderNav className="d-none d-md-flex me-auto">
@@ -38,25 +38,9 @@ const Header = () => {
           <CNavItem>
             <CNavLink href="#">Users</CNavLink>
           </CNavItem>
-
-          <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
-          </CNavItem>
         </CHeaderNav>
 
         <CHeaderNav>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilBell} size="lg" />
-            </CNavLink>
-          </CNavItem>
-
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilList} size="lg" />
-            </CNavLink>
-          </CNavItem>
-
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilAccountLogout} size="lg" />
@@ -68,4 +52,3 @@ const Header = () => {
   )
 }
 
-export default Header

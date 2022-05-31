@@ -1,12 +1,11 @@
 import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
 import navigation from '../../_nav'
 import { SidebarNav } from './SidebarNav'
-import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
 
 const Sidebar = () => {
   const dispatch = useDispatch()
@@ -43,4 +42,4 @@ const Sidebar = () => {
   )
 }
 
-export default React.memo(Sidebar)
+export default memo(Sidebar)
