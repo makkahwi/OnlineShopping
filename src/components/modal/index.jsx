@@ -24,7 +24,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
 
   return (
     <>
-      <CModal visible={open} onClose={() => { setOpen(false); onCancel }}>
+      <CModal visible={open} onClose={() => { setOpen(false); onCancel && onCancel() }}>
         <CModalHeader>
           <CModalTitle className={`text-${color()}`}>
             {title || "Title"}
@@ -36,7 +36,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
         </CModalBody>
 
         <CModalFooter>
-          <CButton color="secondary" onClick={() => { setOpen(false); onCancel() }}>
+          <CButton color="secondary" onClick={() => { setOpen(false); onCancel && onCancel() }}>
             {cancelText || "Cancel"}
           </CButton>
 
