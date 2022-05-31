@@ -19,31 +19,23 @@ const _nav = [
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
-    name: 'Theme',
+    name: 'Store Mgmt',
   },
   {
     component: CNavItem,
-    name: 'Colors',
+    name: 'Listings',
     to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Components',
+    name: 'Sales',
+    to: '/theme/colors',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
@@ -51,6 +43,18 @@ const _nav = [
     to: '/base',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
+      {
+        component: CNavItem,
+        name: 'Colors',
+        to: '/theme/colors',
+        icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Typography',
+        to: '/theme/typography',
+        icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+      },
       {
         component: CNavItem,
         name: 'Accordion',
@@ -121,14 +125,6 @@ const _nav = [
         name: 'Tooltips',
         to: '/base/tooltips',
       },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
-    items: [
       {
         component: CNavItem,
         name: 'Buttons',
@@ -144,13 +140,6 @@ const _nav = [
         name: 'Dropdowns',
         to: '/buttons/dropdowns',
       },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Forms',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
       {
         component: CNavItem,
         name: 'Form Control',
@@ -191,19 +180,12 @@ const _nav = [
         name: 'Validation',
         to: '/forms/validation',
       },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
+      {
+        component: CNavItem,
+        name: 'Charts',
+        to: '/charts',
+        icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+      },
       {
         component: CNavItem,
         name: 'CoreUI Free',
@@ -223,13 +205,6 @@ const _nav = [
         name: 'CoreUI Brands',
         to: '/icons/brands',
       },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
-    items: [
       {
         component: CNavItem,
         name: 'Alerts',
@@ -250,27 +225,16 @@ const _nav = [
         name: 'Toasts',
         to: '/notifications/toasts',
       },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Extras',
-  },
-  {
-    component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
+      {
+        component: CNavItem,
+        name: 'Widgets',
+        to: '/widgets',
+        icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+        badge: {
+          color: 'info',
+          text: 'NEW',
+        },
+      },
       {
         component: CNavItem,
         name: 'Login',

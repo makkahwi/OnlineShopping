@@ -10,9 +10,10 @@ import {
   CFormInput,
   CInputGroup,
   CInputGroupText,
-  CRow,
+  CRow
 } from '@coreui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Registeration = () => {
   return (
@@ -125,7 +126,9 @@ const Registeration = () => {
                   </CInputGroup>
 
                   <div className="d-grid">
-                    <CButton color="success">Create Seller Account</CButton>
+                    <Link to="/dashboard">
+                      <CButton color="success">Create Seller Account</CButton>
+                    </Link>
                   </div>
                 </CForm>
               </CCardBody>
