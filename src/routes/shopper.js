@@ -2,6 +2,7 @@ import React, { lazy } from 'react'
 
 const Landing = lazy(() => import('../views/shopper/stores'))
 const Orders = lazy(() => import('../views/shopper/Orders'))
+const Basket = lazy(() => import('../views/shopper/basket'))
 
 const Listings = lazy(() => import('../views/seller/Listings'))
 
@@ -59,6 +60,7 @@ const Page500 = lazy(() => import('../views/base/pages/page500/Page500'))
 const routes = [
   { path: '/stores', exact: true, name: 'Home', element: Landing },
   { path: '/orders', name: 'Orders', element: Orders },
+  { path: '/basket', name: 'Basket', element: Basket },
 
   { path: '/listings', name: 'Listings', element: Listings },
 

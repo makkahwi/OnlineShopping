@@ -5,7 +5,7 @@ import './scss/style.scss'
 
 const Landing = lazy(() => import('./views/landing'))
 const Registeration = lazy(() => import('./views/registeration'))
-const Layout = lazy(() => import('./layout/seller'))
+const Layout = lazy(() => import('./layout/shopper'))
 
 class App extends Component {
   render() {

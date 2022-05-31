@@ -1,4 +1,4 @@
-import { cilAccountLogout } from '@coreui/icons'
+import { cilAccountLogout, cilBasket } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import { CContainer, CHeader, CHeaderNav, CNavItem, CNavLink, CSidebarBrand } from '@coreui/react'
 import React from 'react'
@@ -26,6 +26,12 @@ export default function Header() {
         </CHeaderNav>
 
         <CHeaderNav>
+          <CNavItem>
+            <CNavLink href="/basket">
+              <CIcon icon={cilBasket} size="lg" />
+            </CNavLink>
+          </CNavItem>
+
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilAccountLogout} size="lg" />
