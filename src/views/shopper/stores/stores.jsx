@@ -21,8 +21,8 @@ export default function Stores({ setStore }) {
       name: "FoodX",
       location: "Ma'an",
       products: [
-        { id: 1, image: tempImage, name: "Product 3", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, name: "Product 4", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 3, image: tempImage, name: "Product 3", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 4, image: tempImage, name: "Product 4", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -30,8 +30,8 @@ export default function Stores({ setStore }) {
       name: "Zaki",
       location: "Ma'an",
       products: [
-        { id: 1, image: tempImage, name: "Product 5", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, name: "Product 6", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 5, image: tempImage, name: "Product 5", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 6, image: tempImage, name: "Product 6", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -39,8 +39,8 @@ export default function Stores({ setStore }) {
       name: "Yuck",
       location: "Aqaba",
       products: [
-        { id: 1, image: tempImage, name: "Product 7", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, name: "Product 8", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 7, image: tempImage, name: "Product 7", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 8, image: tempImage, name: "Product 8", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -48,8 +48,8 @@ export default function Stores({ setStore }) {
       name: "Lazeez",
       location: "Mafraq",
       products: [
-        { id: 1, image: tempImage, name: "Product 9", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, name: "Product 10", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 9, image: tempImage, name: "Product 9", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 10, image: tempImage, name: "Product 10", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     }
   ];

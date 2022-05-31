@@ -4,7 +4,7 @@ const Landing = lazy(() => import('../views/shopper/stores'))
 const Orders = lazy(() => import('../views/shopper/Orders'))
 const Basket = lazy(() => import('../views/shopper/basket'))
 
-const Listings = lazy(() => import('../views/seller/Listings'))
+// const Listings = lazy(() => import('../views/seller/Listings'))
 
 
 // Base
@@ -62,7 +62,7 @@ const routes = [
   { path: '/orders', name: 'Orders', element: Orders },
   { path: '/basket', name: 'Basket', element: Basket },
 
-  { path: '/listings', name: 'Listings', element: Listings },
+  // { path: '/listings', name: 'Listings', element: Listings },
 
 
   { path: '/theme', name: 'Theme', element: Colors, exact: true },

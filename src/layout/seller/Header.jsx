@@ -8,7 +8,7 @@ import {
 } from '@coreui/react'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export default function Header() {
   const dispatch = useDispatch()
@@ -28,23 +28,11 @@ export default function Header() {
           VeganMegan
         </CHeaderBrand>
 
-        <CHeaderNav className="d-none d-md-flex me-auto">
-          <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink}>
-              Dashboard
-            </CNavLink>
-          </CNavItem>
-
-          <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
-          </CNavItem>
-        </CHeaderNav>
-
         <CHeaderNav>
           <CNavItem>
-            <CNavLink href="#">
+            <Link to="#" className='text-dark mx-2' style={{ textDecoration: "None" }}>
               <CIcon icon={cilAccountLogout} size="lg" />
-            </CNavLink>
+            </Link>
           </CNavItem>
         </CHeaderNav>
       </CContainer>

@@ -4,8 +4,11 @@ import { CContainer, CHeader, CHeaderNav, CNavItem, CNavLink, CSidebarBrand } fr
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import navigation from '../../navs/shopper'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
+  const basket = useSelector((state) => state.basket)
+
   return (
     <CHeader position="sticky" className="mb-4">
       <CContainer fluid>
@@ -18,24 +21,26 @@ export default function Header() {
         <CHeaderNav className="d-none d-md-flex me-auto">
           {navigation.map((link, i) => (
             <CNavItem key={i}>
-              <CNavLink to={link.to}>
+              <Link to={link.to} className='text-success mx-2' style={{ textDecoration: "None" }}>
                 {link.name}
-              </CNavLink>
+              </Link>
             </CNavItem>
           ))}
         </CHeaderNav>
 
         <CHeaderNav>
           <CNavItem>
-            <CNavLink href="/basket">
+            <Link to="/basket" className='text-success mx-2' style={{ textDecoration: "None" }}>
               <CIcon icon={cilBasket} size="lg" />
-            </CNavLink>
+
+              {basket.reduce((sum, order) => sum += order.count, 0)}
+            </Link>
           </CNavItem>
 
           <CNavItem>
-            <CNavLink href="#">
+            <Link to="#" className='text-dark mx-2' style={{ textDecoration: "None" }}>
               <CIcon icon={cilAccountLogout} size="lg" />
-            </CNavLink>
+            </Link>
           </CNavItem>
         </CHeaderNav>
       </CContainer>

@@ -12,12 +12,6 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Listings',
-    to: '/listings',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
     name: 'Orders',
     to: '/orders',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
