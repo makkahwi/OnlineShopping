@@ -1,8 +1,8 @@
 import React, { lazy } from 'react'
 
-const Dashboard = lazy(() => import('./views/dashboard/Dashboard'))
-const Colors = lazy(() => import('./views/theme/colors/Colors'))
-const Typography = lazy(() => import('./views/theme/typography/Typography'))
+const Dashboard = lazy(() => import('./views/seller/dashboard'))
+const Colors = lazy(() => import('./views/base/theme/colors/Colors'))
+const Typography = lazy(() => import('./views/base/theme/typography/Typography'))
 
 // Base
 const Accordion = lazy(() => import('./views/base/accordion/Accordion'))
@@ -21,36 +21,36 @@ const Tables = lazy(() => import('./views/base/tables/Tables'))
 const Tooltips = lazy(() => import('./views/base/tooltips/Tooltips'))
 
 // Buttons
-const Buttons = lazy(() => import('./views/buttons/buttons/Buttons'))
-const ButtonGroups = lazy(() => import('./views/buttons/button-groups/ButtonGroups'))
-const Dropdowns = lazy(() => import('./views/buttons/dropdowns/Dropdowns'))
+const Buttons = lazy(() => import('./views/base/buttons/buttons/Buttons'))
+const ButtonGroups = lazy(() => import('./views/base/buttons/button-groups/ButtonGroups'))
+const Dropdowns = lazy(() => import('./views/base/buttons/dropdowns/Dropdowns'))
 
 //Forms
-const ChecksRadios = lazy(() => import('./views/forms/checks-radios/ChecksRadios'))
-const FloatingLabels = lazy(() => import('./views/forms/floating-labels/FloatingLabels'))
-const FormControl = lazy(() => import('./views/forms/form-control/FormControl'))
-const InputGroup = lazy(() => import('./views/forms/input-group/InputGroup'))
-const Layout = lazy(() => import('./views/forms/layout/Layout'))
-const Range = lazy(() => import('./views/forms/range/Range'))
-const Select = lazy(() => import('./views/forms/select/Select'))
-const Validation = lazy(() => import('./views/forms/validation/Validation'))
+const ChecksRadios = lazy(() => import('./views/base/forms/checks-radios/ChecksRadios'))
+const FloatingLabels = lazy(() => import('./views/base/forms/floating-labels/FloatingLabels'))
+const FormControl = lazy(() => import('./views/base/forms/form-control/FormControl'))
+const InputGroup = lazy(() => import('./views/base/forms/input-group/InputGroup'))
+const Layout = lazy(() => import('./views/base/forms/layout/Layout'))
+const Range = lazy(() => import('./views/base/forms/range/Range'))
+const Select = lazy(() => import('./views/base/forms/select/Select'))
+const Validation = lazy(() => import('./views/base/forms/validation/Validation'))
 
-const Charts = lazy(() => import('./views/charts/Charts'))
+const Charts = lazy(() => import('./views/base/charts/Charts'))
 
 // Icons
-const CoreUIIcons = lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
-const Flags = lazy(() => import('./views/icons/flags/Flags'))
-const Brands = lazy(() => import('./views/icons/brands/Brands'))
+const CoreUIIcons = lazy(() => import('./views/base/icons/coreui-icons/CoreUIIcons'))
+const Flags = lazy(() => import('./views/base/icons/flags/Flags'))
+const Brands = lazy(() => import('./views/base/icons/brands/Brands'))
 
 // Notifications
-const Alerts = lazy(() => import('./views/notifications/alerts/Alerts'))
-const Badges = lazy(() => import('./views/notifications/badges/Badges'))
-const Modals = lazy(() => import('./views/notifications/modals/Modals'))
-const Toasts = lazy(() => import('./views/notifications/toasts/Toasts'))
+const Alerts = lazy(() => import('./views/base/notifications/alerts/Alerts'))
+const Badges = lazy(() => import('./views/base/notifications/badges/Badges'))
+const Modals = lazy(() => import('./views/base/notifications/modals/Modals'))
+const Toasts = lazy(() => import('./views/base/notifications/toasts/Toasts'))
 
-const Widgets = lazy(() => import('./views/widgets/Widgets'))
-const Page404 = lazy(() => import('./views/pages/page404/Page404'))
-const Page500 = lazy(() => import('./views/pages/page500/Page500'))
+const Widgets = lazy(() => import('./views/base/widgets/Widgets'))
+const Page404 = lazy(() => import('./views/base/pages/page404/Page404'))
+const Page500 = lazy(() => import('./views/base/pages/page500/Page500'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },

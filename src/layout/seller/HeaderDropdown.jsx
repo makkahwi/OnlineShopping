@@ -1,4 +1,12 @@
-import React from 'react'
+import {
+  cilBell, cilCommentSquare, cilCreditCard, cilEnvelopeOpen,
+  cilFile,
+  cilLockLocked,
+  cilSettings,
+  cilTask,
+  cilUser
+} from '@coreui/icons'
+import CIcon from '@coreui/icons-react'
 import {
   CAvatar,
   CBadge,
@@ -7,24 +15,13 @@ import {
   CDropdownHeader,
   CDropdownItem,
   CDropdownMenu,
-  CDropdownToggle,
+  CDropdownToggle
 } from '@coreui/react'
-import {
-  cilBell,
-  cilCreditCard,
-  cilCommentSquare,
-  cilEnvelopeOpen,
-  cilFile,
-  cilLockLocked,
-  cilSettings,
-  cilTask,
-  cilUser,
-} from '@coreui/icons'
-import CIcon from '@coreui/icons-react'
-
+import React from 'react'
 import avatar8 from './../../assets/images/avatars/8.jpg'
 
-const AppHeaderDropdown = () => {
+
+const HeaderDropdown = () => {
   return (
     <CDropdown variant="nav-item">
       <CDropdownToggle placement="bottom-end" className="py-0" caret={false}>
@@ -93,4 +90,4 @@ const AppHeaderDropdown = () => {
   )
 }
 
-export default AppHeaderDropdown
+export default HeaderDropdown

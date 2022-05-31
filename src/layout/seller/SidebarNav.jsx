@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { CBadge } from '@coreui/react'
 
-export const AppSidebarNav = ({ items }) => {
+export const SidebarNav = ({ items }) => {
   const location = useLocation()
   const navLink = (name, icon, badge) => {
     return (
@@ -27,8 +27,8 @@ export const AppSidebarNav = ({ items }) => {
       <Component
         {...(rest.to &&
           !rest.items && {
-            component: NavLink,
-          })}
+          component: NavLink,
+        })}
         key={index}
         {...rest}
       >
@@ -62,6 +62,6 @@ export const AppSidebarNav = ({ items }) => {
   )
 }
 
-AppSidebarNav.propTypes = {
+SidebarNav.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
 }

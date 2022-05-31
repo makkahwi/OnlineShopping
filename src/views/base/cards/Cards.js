@@ -21,7 +21,6 @@ import {
 } from '@coreui/react'
 
 
-import ReactImg from 'src/assets/images/react.jpg'
 
 const Cards = () => {
   return (
@@ -50,7 +49,7 @@ const Cards = () => {
             </p>
             <a href="components/card">
               <CCard style={{ width: '18rem' }}>
-                <CCardImage orientation="top" src={ReactImg} />
+                <CCardImage orientation="top" src={""} />
                 <CCardBody>
                   <CCardTitle>Card title</CCardTitle>
                   <CCardText>
@@ -129,7 +128,7 @@ const Cards = () => {
             </p>
             <a href="components/card/#images">
               <CCard style={{ width: '18rem' }}>
-                <CCardImage orientation="top" src={ReactImg} />
+                <CCardImage orientation="top" src={""} />
                 <CCardBody>
                   <CCardText>
                     Some quick example text to build on the card title and make up the bulk of the
@@ -199,7 +198,7 @@ const Cards = () => {
             </p>
             <a href="components/card/#kitchen-sink">
               <CCard style={{ width: '18rem' }}>
-                <CCardImage orientation="top" src={ReactImg} />
+                <CCardImage orientation="top" src={""} />
                 <CCardBody>
                   <CCardTitle>Card title</CCardTitle>
                   <CCardText>
@@ -501,7 +500,7 @@ const Cards = () => {
               <CRow>
                 <CCol lg={6}>
                   <CCard className="mb-3">
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -526,7 +525,7 @@ const Cards = () => {
                         <small className="text-medium-emphasis">Last updated 3 mins ago</small>
                       </CCardText>
                     </CCardBody>
-                    <CCardImage orientation="bottom" src={ReactImg} />
+                    <CCardImage orientation="bottom" src={""} />
                   </CCard>
                 </CCol>
               </CRow>
@@ -662,7 +661,7 @@ const Cards = () => {
             <a href="components/card/#card-groups">
               <CCardGroup>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -675,7 +674,7 @@ const Cards = () => {
                   </CCardBody>
                 </CCard>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -688,7 +687,7 @@ const Cards = () => {
                   </CCardBody>
                 </CCard>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -709,7 +708,7 @@ const Cards = () => {
             <a href="components/card/#card-groups">
               <CCardGroup>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -722,7 +721,7 @@ const Cards = () => {
                   </CCardFooter>
                 </CCard>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -735,7 +734,7 @@ const Cards = () => {
                   </CCardFooter>
                 </CCard>
                 <CCard>
-                  <CCardImage orientation="top" src={ReactImg} />
+                  <CCardImage orientation="top" src={""} />
                   <CCardBody>
                     <CCardTitle>Card title</CCardTitle>
                     <CCardText>
@@ -771,7 +770,7 @@ const Cards = () => {
               <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 2 }}>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -786,7 +785,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -801,7 +800,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -816,7 +815,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -839,7 +838,7 @@ const Cards = () => {
               <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -854,7 +853,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -869,7 +868,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>
@@ -884,7 +883,7 @@ const Cards = () => {
                 </CCol>
                 <CCol xs>
                   <CCard>
-                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardImage orientation="top" src={""} />
                     <CCardBody>
                       <CCardTitle>Card title</CCardTitle>
                       <CCardText>

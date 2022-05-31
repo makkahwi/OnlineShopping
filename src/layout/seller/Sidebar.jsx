@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
-import navigation from '../_nav'
-import { AppSidebarNav } from './AppSidebarNav'
+import navigation from '../../_nav'
+import { SidebarNav } from './SidebarNav'
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
 
-const AppSidebar = () => {
+const Sidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
@@ -31,7 +31,7 @@ const AppSidebar = () => {
 
       <CSidebarNav>
         <SimpleBar>
-          <AppSidebarNav items={navigation} />
+          <SidebarNav items={navigation} />
         </SimpleBar>
       </CSidebarNav>
 
@@ -43,4 +43,4 @@ const AppSidebar = () => {
   )
 }
 
-export default React.memo(AppSidebar)
+export default React.memo(Sidebar)

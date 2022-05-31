@@ -1,10 +1,13 @@
-import React, { Component, Suspense, lazy } from 'react'
+import { CSpinner } from '@coreui/react'
+import React, { Component, lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './scss/style.scss'
 
 const loading = (
   <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse">Loading</div>
+    <CSpinner color="success" />
+    <br />
+    <h4 className='text-success'>Loading</h4>
   </div>
 )
 
