@@ -59,7 +59,7 @@ export default function Orders() {
                 <CTableHeaderCell>#</CTableHeaderCell>
                 <CTableHeaderCell>Customer Id</CTableHeaderCell>
                 <CTableHeaderCell>Value</CTableHeaderCell>
-                <CTableHeaderCell>Notes</CTableHeaderCell>
+                <CTableHeaderCell>Status</CTableHeaderCell>
                 <CTableHeaderCell>Actions</CTableHeaderCell>
               </CTableRow>
             </CTableHead>
@@ -73,7 +73,7 @@ export default function Orders() {
 
                   <CTableDataCell>${listing.value}</CTableDataCell>
 
-                  <CTableDataCell>{listing.notes}</CTableDataCell>
+                  <CTableDataCell>{listing.status}</CTableDataCell>
 
                   <CTableDataCell>
                     <CButtonGroup size="sm">
