@@ -1,11 +1,6 @@
 import { cilNewspaper, cilPencil, cilTrash } from '@coreui/icons';
 import CIcon from '@coreui/icons-react';
-import {
-  CButton, CButtonGroup, CFormInput, CImage, CInputGroup,
-  CInputGroupText, CTable, CTableBody, CTableDataCell,
-  CTableHead, CTableHeaderCell,
-  CTableRow, CTooltip
-} from '@coreui/react';
+import { CButton, CButtonGroup, CFormInput, CImage, CInputGroup, CInputGroupText, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow, CTooltip } from '@coreui/react';
 import React, { useState } from 'react';
 import Content from '../../../components/content';
 import Modal from '../../../components/modal';

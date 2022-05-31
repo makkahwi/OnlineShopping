@@ -1,6 +1,6 @@
 import React, { lazy } from 'react'
 
-const Landing = lazy(() => import('../views/shopper/landing'))
+const Dashboard = lazy(() => import('../views/seller/dashboard'))
 const Listings = lazy(() => import('../views/seller/Listings'))
 const Orders = lazy(() => import('../views/seller/Orders'))
 
@@ -56,7 +56,8 @@ const Page404 = lazy(() => import('../views/base/pages/page404/Page404'))
 const Page500 = lazy(() => import('../views/base/pages/page500/Page500'))
 
 const routes = [
-  { path: '/landing', exact: true, name: 'Home', element: Landing },
+  { path: '/', exact: true, name: 'Home' },
+  { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/listings', name: 'Listings', element: Listings },
   { path: '/orders', name: 'Orders', element: Orders },
 

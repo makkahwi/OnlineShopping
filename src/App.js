@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Loading from './components/loading'
 import './scss/style.scss'
 
-// Pages
 const Landing = lazy(() => import('./views/landing'))
 const Registeration = lazy(() => import('./views/registeration'))
 const Layout = lazy(() => import('./layout/seller'))

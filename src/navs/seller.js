@@ -1,18 +1,7 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
-import {
-  cilBell,
-  cilCalculator,
-  cilChartPie,
-  cilCursor,
-  cilDrop,
-  cilNotes,
-  cilPencil,
-  cilPuzzle,
-  cilSpeedometer,
-  cilStar,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { cilCalculator, cilChartPie, cilDrop, cilNotes, cilPencil, cilPuzzle } from '@coreui/icons';
+import CIcon from '@coreui/icons-react';
+import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react';
+import React from 'react';
 
 const _nav = [
   {
@@ -257,6 +246,6 @@ const _nav = [
       },
     ],
   },
-]
+];
 
 export default _nav

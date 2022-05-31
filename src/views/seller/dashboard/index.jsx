@@ -1,53 +1,13 @@
-import React from 'react'
-
-import {
-  CAvatar,
-  CButton,
-  CButtonGroup,
-  CCard,
-  CCardBody,
-  CCardFooter,
-  CCardHeader,
-  CCol,
-  CProgress,
-  CRow,
-  CTable,
-  CTableBody,
-  CTableDataCell,
-  CTableHead,
-  CTableHeaderCell,
-  CTableRow,
-} from '@coreui/react'
+import { cibCcAmex, cibCcApplePay, cibCcMastercard, cibCcPaypal, cibCcStripe, cibCcVisa, cibFacebook, cibGoogle, cibLinkedin, cibTwitter, cifBr, cifEs, cifFr, cifIn, cifPl, cifUs, cilCloudDownload, cilPeople, cilUser, cilUserFemale } from '@coreui/icons'
+import CIcon from '@coreui/icons-react'
+import { CAvatar, CButton, CButtonGroup, CCard, CCardBody, CCardFooter, CCardHeader, CCol, CProgress, CRow, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow } from '@coreui/react'
 import { CChartLine } from '@coreui/react-chartjs'
 import { getStyle, hexToRgba } from '@coreui/utils'
-import CIcon from '@coreui/icons-react'
-import {
-  cibCcAmex,
-  cibCcApplePay,
-  cibCcMastercard,
-  cibCcPaypal,
-  cibCcStripe,
-  cibCcVisa,
-  cibGoogle,
-  cibFacebook,
-  cibLinkedin,
-  cifBr,
-  cifEs,
-  cifFr,
-  cifIn,
-  cifPl,
-  cifUs,
-  cibTwitter,
-  cilCloudDownload,
-  cilPeople,
-  cilUser,
-  cilUserFemale,
-} from '@coreui/icons'
-
+import React from 'react'
 import WidgetsBrand from '../../base/widgets/WidgetsBrand'
 import WidgetsDropdown from '../../base/widgets/WidgetsDropdown'
 
-const Dashboard = () => {
+export default function Dashboard() {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 
   const progressExample = [
@@ -449,6 +409,4 @@ const Dashboard = () => {
       </CRow>
     </>
   )
-}
-
-export default Dashboard
+};
