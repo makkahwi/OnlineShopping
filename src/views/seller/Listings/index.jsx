@@ -36,7 +36,7 @@ export default function Listings() {
     ) : key != "id" && (
       <CInputGroup className="mb-3">
         <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-        <CFormInput value={detailsData[key]} disabled={action == "View"} />
+        <CFormInput value={detailsData[key]} disabled={action != "Update"} />
       </CInputGroup>
     ))}
   </>);
