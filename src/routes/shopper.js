@@ -1,8 +1,9 @@
 import React, { lazy } from 'react'
 
 const Landing = lazy(() => import('../views/shopper/stores'))
+const Orders = lazy(() => import('../views/shopper/Orders'))
+
 const Listings = lazy(() => import('../views/seller/Listings'))
-const Orders = lazy(() => import('../views/seller/Orders'))
 
 
 // Base
@@ -57,8 +58,9 @@ const Page500 = lazy(() => import('../views/base/pages/page500/Page500'))
 
 const routes = [
   { path: '/stores', exact: true, name: 'Home', element: Landing },
-  { path: '/listings', name: 'Listings', element: Listings },
   { path: '/orders', name: 'Orders', element: Orders },
+
+  { path: '/listings', name: 'Listings', element: Listings },
 
 
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
