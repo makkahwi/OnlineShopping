@@ -461,7 +461,6 @@ const Modals = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <a name="Modal" href="components/modal" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -476,24 +475,23 @@ const Modals = () => {
               include modal headers with dismiss actions whenever possible, or provide another
               explicit dismiss action.
             </p>
-            <a href="components/modal">
-              <CModal
-                className="show d-block position-static"
-                backdrop={false}
-                keyboard={false}
-                portal={false}
-                visible
-              >
-                <CModalHeader>
-                  <CModalTitle>Modal title</CModalTitle>
-                </CModalHeader>
-                <CModalBody>Modal body text goes here.</CModalBody>
-                <CModalFooter>
-                  <CButton color="secondary">Close</CButton>
-                  <CButton color="primary">Save changes</CButton>
-                </CModalFooter>
-              </CModal>
-            </a>
+            <CModal
+              className="show d-block position-static"
+              backdrop={false}
+              keyboard={false}
+              portal={false}
+              visible
+            >
+              <CModalHeader>
+                <CModalTitle>Modal title</CModalTitle>
+              </CModalHeader>
+              <CModalBody>Modal body text goes here.</CModalBody>
+              <CModalFooter>
+                <CButton color="secondary">Close</CButton>
+                <CButton color="primary">Save changes</CButton>
+              </CModalFooter>
+            </CModal>
+
           </CCardBody>
         </CCard>
       </CCol>
@@ -507,7 +505,7 @@ const Modals = () => {
               Toggle a working modal demo by clicking the button below. It will slide down and fade
               in from the top of the page.
             </p>
-            <a href="components/modal#live-demo">{LiveDemo()}</a>
+            {LiveDemo()}
           </CCardBody>
         </CCard>
       </CCol>
@@ -522,7 +520,7 @@ const Modals = () => {
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
             </p>
-            <a href="components/modal#static-backdrop">{StaticBackdrop()}</a>
+            {StaticBackdrop()}
           </CCardBody>
         </CCard>
       </CCol>
@@ -537,16 +535,12 @@ const Modals = () => {
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
             </p>
-            <a href="components/modal#scrolling-long-content">
-              {ScrollingLongContent()}
-            </a>
-            <p className="text-medium-emphasis small">
-              You can also create a scrollable modal that allows scroll the modal body by adding{' '}
-              <code>scrollable</code> prop.
-            </p>
-            <a href="components/modal#scrolling-long-content">
-              {ScrollingLongContent2()}
-            </a>
+            {ScrollingLongContent()}
+
+            You can also create a scrollable modal that allows scroll the modal body by adding{' '}
+            <code>scrollable</code> prop.
+            {ScrollingLongContent2()}
+
           </CCardBody>
         </CCard>
       </CCol>
@@ -560,12 +554,10 @@ const Modals = () => {
               Add <code>alignment=&#34;center&#34;</code> to <code>&lt;CModal&gt;</code> to
               vertically center the modal.
             </p>
-            <a href="components/modal#vertically-centered">
-              {VerticallyCentered()}
-            </a>
-            <a href="components/modal#vertically-centered">
-              {VerticallyCentered2()}
-            </a>
+            {VerticallyCentered()}
+
+            {VerticallyCentered2()}
+
           </CCardBody>
         </CCard>
       </CCol>
@@ -580,9 +572,8 @@ const Modals = () => {
               modals as needed. When modals are closed, any tooltips and popovers within are also
               automatically dismissed.
             </p>
-            <a href="components/modal#tooltips-and-popovers">
-              {TooltipsPopovers()}
-            </a>
+            {TooltipsPopovers()}
+
           </CCardBody>
         </CCard>
       </CCol>
@@ -642,7 +633,7 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <a href="components/modal#optional-sizes">{OptionalSizes()}</a>
+            {OptionalSizes()}
           </CCardBody>
         </CCard>
       </CCol>
@@ -712,7 +703,7 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <a href="components/modal#fullscreen-modal">{FullscreenModal()}</a>
+            {FullscreenModal()}
           </CCardBody>
         </CCard>
       </CCol>

@@ -1,10 +1,12 @@
 import React, { lazy } from 'react'
 
 const Dashboard = lazy(() => import('./views/seller/dashboard'))
-const Colors = lazy(() => import('./views/base/theme/colors/Colors'))
-const Typography = lazy(() => import('./views/base/theme/typography/Typography'))
+const Listings = lazy(() => import('./views/seller/Listings'))
+
 
 // Base
+const Colors = lazy(() => import('./views/base/theme/colors/Colors'))
+const Typography = lazy(() => import('./views/base/theme/typography/Typography'))
 const Accordion = lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
 const Cards = lazy(() => import('./views/base/cards/Cards'))
@@ -55,6 +57,9 @@ const Page500 = lazy(() => import('./views/base/pages/page500/Page500'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/listings', name: 'Listings', element: Listings },
+
+
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
