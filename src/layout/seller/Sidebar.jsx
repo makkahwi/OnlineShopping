@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
-import navigation from '../../_nav'
+import navigation from '../../navs/seller'
 import { SidebarNav } from './SidebarNav'
 
 const Sidebar = () => {
