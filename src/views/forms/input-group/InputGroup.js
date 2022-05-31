@@ -19,13 +19,13 @@ import {
   CInputGroupText,
   CRow,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const Select = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Input Group" href="forms/input-group" />
+        <a name="Input Group" href="forms/input-group" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -38,7 +38,7 @@ const Select = () => {
               sides of an input. Remember to place <code>&lt;CFormLabel&gt;</code>s outside the
               input group.
             </p>
-            <DocsExample href="forms/input-group">
+            <a href="forms/input-group">
               <CInputGroup className="mb-3">
                 <CInputGroupText id="basic-addon1">@</CInputGroupText>
                 <CFormInput
@@ -74,7 +74,7 @@ const Select = () => {
                 <CInputGroupText>With textarea</CInputGroupText>
                 <CFormTextarea aria-label="With textarea"></CFormTextarea>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -89,7 +89,7 @@ const Select = () => {
               custom form field validation within an input group. You may disable this with{' '}
               <code>.flex-nowrap</code>.
             </p>
-            <DocsExample href="forms/input-group#wrapping">
+            <a href="forms/input-group#wrapping">
               <CInputGroup className="flex-nowrap">
                 <CInputGroupText id="addon-wrapping">@</CInputGroupText>
                 <CFormInput
@@ -98,7 +98,7 @@ const Select = () => {
                   aria-describedby="addon-wrapping"
                 />
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -116,7 +116,7 @@ const Select = () => {
             <p className="text-medium-emphasis small">
               <strong>Sizing on the individual input group elements isn&#39;tsupported.</strong>
             </p>
-            <DocsExample href="forms/input-group#sizing">
+            <a href="forms/input-group#sizing">
               <CInputGroup size="sm" className="mb-3">
                 <CInputGroupText id="inputGroup-sizing-sm">Small</CInputGroupText>
                 <CFormInput
@@ -138,7 +138,7 @@ const Select = () => {
                   aria-describedby="inputGroup-sizing-lg"
                 />
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -151,7 +151,7 @@ const Select = () => {
             <p className="text-medium-emphasis small">
               Place any checkbox or radio option within an input group&#39;s addon instead of text.
             </p>
-            <DocsExample href="forms/input-group#checkboxes-and-radios">
+            <a href="forms/input-group#checkboxes-and-radios">
               <CInputGroup className="mb-3">
                 <CInputGroupText>
                   <CFormCheck
@@ -172,7 +172,7 @@ const Select = () => {
                 </CInputGroupText>
                 <CFormInput aria-label="Text input with radio button" />
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -187,13 +187,13 @@ const Select = () => {
               styles are only available for input groups with a single{' '}
               <code>&lt;CFormInput&gt;</code>.
             </p>
-            <DocsExample href="forms/input-group#multiple-inputs">
+            <a href="forms/input-group#multiple-inputs">
               <CInputGroup>
                 <CInputGroupText>First and last name</CInputGroupText>
                 <CFormInput aria-label="First name" />
                 <CFormInput aria-label="Last name" />
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -207,7 +207,7 @@ const Select = () => {
               Multiple add-ons are supported and can be mixed with checkbox and radio input
               versions..
             </p>
-            <DocsExample href="forms/input-group#multiple-addons">
+            <a href="forms/input-group#multiple-addons">
               <CInputGroup className="mb-3">
                 <CInputGroupText>$</CInputGroupText>
                 <CInputGroupText>0.00</CInputGroupText>
@@ -218,7 +218,7 @@ const Select = () => {
                 <CInputGroupText>$</CInputGroupText>
                 <CInputGroupText>0.00</CInputGroupText>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -232,7 +232,7 @@ const Select = () => {
               Multiple add-ons are supported and can be mixed with checkbox and radio input
               versions..
             </p>
-            <DocsExample href="forms/input-group#button-addons">
+            <a href="forms/input-group#button-addons">
               <CInputGroup className="mb-3">
                 <CButton type="button" color="secondary" variant="outline" id="button-addon1">
                   Button
@@ -274,7 +274,7 @@ const Select = () => {
                   Button
                 </CButton>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -284,7 +284,7 @@ const Select = () => {
             <strong>React Input group</strong> <small>Buttons with dropdowns</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/input-group#buttons-with-dropdowns">
+            <a href="forms/input-group#buttons-with-dropdowns">
               <CInputGroup className="mb-3">
                 <CDropdown variant="input-group">
                   <CDropdownToggle color="secondary" variant="outline">
@@ -342,7 +342,7 @@ const Select = () => {
                   </CDropdownMenu>
                 </CDropdown>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -352,7 +352,7 @@ const Select = () => {
             <strong>React Input group</strong> <small>Segmented buttons</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/input-group#segmented-buttons">
+            <a href="forms/input-group#segmented-buttons">
               <CInputGroup className="mb-3">
                 <CDropdown variant="input-group">
                   <CButton type="button" color="secondary" variant="outline">
@@ -385,7 +385,7 @@ const Select = () => {
                   </CDropdownMenu>
                 </CDropdown>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -395,7 +395,7 @@ const Select = () => {
             <strong>React Input group</strong> <small>Custom select</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/input-group#custom-select">
+            <a href="forms/input-group#custom-select">
               <CInputGroup className="mb-3">
                 <CInputGroupText component="label" htmlFor="inputGroupSelect01">
                   Options
@@ -440,7 +440,7 @@ const Select = () => {
                   Button
                 </CButton>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -450,7 +450,7 @@ const Select = () => {
             <strong>React Input group</strong> <small>Custom file input</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/input-group#custom-file-input">
+            <a href="forms/input-group#custom-file-input">
               <CInputGroup className="mb-3">
                 <CInputGroupText component="label" htmlFor="inputGroupFile01">
                   Upload
@@ -495,7 +495,7 @@ const Select = () => {
                   Button
                 </CButton>
               </CInputGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

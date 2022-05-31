@@ -19,7 +19,7 @@ import {
   CCol,
   CRow,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 import ReactImg from 'src/assets/images/react.jpg'
 
@@ -27,7 +27,7 @@ const Cards = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Card" href="components/card" />
+        <a name="Card" href="components/card" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -48,7 +48,7 @@ const Cards = () => {
               no fixed width to start, so they&#39;ll naturally fill the full width of its parent
               element.
             </p>
-            <DocsExample href="components/card">
+            <a href="components/card">
               <CCard style={{ width: '18rem' }}>
                 <CCardImage orientation="top" src={ReactImg} />
                 <CCardBody>
@@ -60,7 +60,7 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -74,11 +74,11 @@ const Cards = () => {
               The main block of a card is the <code>&lt;CCardBody&gt;</code>. Use it whenever you
               need a padded section within a card.
             </p>
-            <DocsExample href="components/card/#body">
+            <a href="components/card/#body">
               <CCard>
                 <CCardBody>This is some text within a card body.</CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -99,7 +99,7 @@ const Cards = () => {
               stored in a <code>&lt;CCardBody&gt;</code> item, the card title, and subtitle are
               arranged rightly.
             </p>
-            <DocsExample href="components/card/#titles-text-and-links">
+            <a href="components/card/#titles-text-and-links">
               <CCard style={{ width: '18rem' }}>
                 <CCardBody>
                   <CCardTitle>Card title</CCardTitle>
@@ -112,7 +112,7 @@ const Cards = () => {
                   <CCardLink href="#">Another link</CCardLink>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -127,7 +127,7 @@ const Cards = () => {
               <code>.card-text</code>, text can be added to the card. Text within{' '}
               <code>.card-text</code> can additionally be styled with the regular HTML tags.
             </p>
-            <DocsExample href="components/card/#images">
+            <a href="components/card/#images">
               <CCard style={{ width: '18rem' }}>
                 <CCardImage orientation="top" src={ReactImg} />
                 <CCardBody>
@@ -137,7 +137,7 @@ const Cards = () => {
                   </CCardText>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -150,7 +150,7 @@ const Cards = () => {
             <p className="text-medium-emphasis small">
               Create lists of content in a card with a flush list group.
             </p>
-            <DocsExample href="components/card/#list-groups">
+            <a href="components/card/#list-groups">
               <CRow>
                 <CCol lg={4}>
                   <CCard>
@@ -182,7 +182,7 @@ const Cards = () => {
                   </CCard>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -197,7 +197,7 @@ const Cards = () => {
               in there. Shown below are image styles, blocks, text styles, and a list group—all
               wrapped in a fixed-width card.
             </p>
-            <DocsExample href="components/card/#kitchen-sink">
+            <a href="components/card/#kitchen-sink">
               <CCard style={{ width: '18rem' }}>
                 <CCardImage orientation="top" src={ReactImg} />
                 <CCardBody>
@@ -217,7 +217,7 @@ const Cards = () => {
                   <CCardLink href="#">Another link</CCardLink>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -230,7 +230,7 @@ const Cards = () => {
             <p className="text-medium-emphasis small">
               Add an optional header and/or footer within a card.
             </p>
-            <DocsExample href="components/card/#header-and-footer">
+            <a href="components/card/#header-and-footer">
               <CCard>
                 <CCardHeader>Header</CCardHeader>
                 <CCardBody>
@@ -241,11 +241,11 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               Card headers can be styled by adding ex. <code>component=&#34;h5&#34;</code>.
             </p>
-            <DocsExample href="components/card/#header-and-footer">
+            <a href="components/card/#header-and-footer">
               <CCard>
                 <CCardHeader component="h5">Header</CCardHeader>
                 <CCardBody>
@@ -256,8 +256,8 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
-            <DocsExample href="components/card/#header-and-footer">
+            </a>
+            <a href="components/card/#header-and-footer">
               <CCard>
                 <CCardHeader>Quote</CCardHeader>
                 <CCardBody>
@@ -272,8 +272,8 @@ const Cards = () => {
                   </blockquote>
                 </CCardBody>
               </CCard>
-            </DocsExample>
-            <DocsExample href="components/card/#header-and-footer">
+            </a>
+            <a href="components/card/#header-and-footer">
               <CCard className="text-center">
                 <CCardHeader>Header</CCardHeader>
                 <CCardBody>
@@ -285,7 +285,7 @@ const Cards = () => {
                 </CCardBody>
                 <CCardFooter className="text-medium-emphasis">2 days ago</CCardFooter>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -304,7 +304,7 @@ const Cards = () => {
             <p className="text-medium-emphasis small">
               Using the grid, wrap cards in columns and rows as needed.
             </p>
-            <DocsExample href="components/card/#sizing">
+            <a href="components/card/#sizing">
               <CRow>
                 <CCol sm={6}>
                   <CCard>
@@ -329,14 +329,14 @@ const Cards = () => {
                   </CCard>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
             <h3>Using utilities</h3>
             <p className="text-medium-emphasis small">
               Use some of{' '}
               <a href="https://coreui.io/docs/utilities/sizing/">available sizing utilities</a> to
               rapidly set a card&#39;s width.
             </p>
-            <DocsExample href="components/card/#sizing">
+            <a href="components/card/#sizing">
               <CCard className="w-75">
                 <CCardBody>
                   <CCardTitle>Card title</CCardTitle>
@@ -355,12 +355,12 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
             <strong>Using custom CSS</strong>
             <p className="text-medium-emphasis small">
               Use custom CSS in your stylesheets or as inline styles to set a width.
             </p>
-            <DocsExample href="components/card/#sizing">
+            <a href="components/card/#sizing">
               <CCard style={{ width: '18rem' }}>
                 <CCardBody>
                   <CCardTitle>Special title treatment</CCardTitle>
@@ -370,7 +370,7 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -386,7 +386,7 @@ const Cards = () => {
               <a href="https://coreui.io/docs/utilities/text/#text-alignment">text align classes</a>
               .
             </p>
-            <DocsExample href="components/card/#text-alignment">
+            <a href="components/card/#text-alignment">
               <CCard style={{ width: '18rem' }}>
                 <CCardBody>
                   <CCardTitle>Special title treatment</CCardTitle>
@@ -414,7 +414,7 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -428,7 +428,7 @@ const Cards = () => {
               Add some navigation to a <code>&lt;CCardHeader&gt;</code> with our{' '}
               <code>&lt;CNav&gt;</code> component.
             </p>
-            <DocsExample href="components/card/##navigation">
+            <a href="components/card/##navigation">
               <CCard className="text-center">
                 <CCardHeader>
                   <CNav variant="tabs" className="card-header-tabs">
@@ -455,8 +455,8 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
-            <DocsExample href="components/card/##navigation">
+            </a>
+            <a href="components/card/##navigation">
               <CCard className="text-center">
                 <CCardHeader>
                   <CNav variant="pills" className="card-header-pills">
@@ -483,7 +483,7 @@ const Cards = () => {
                   <CButton href="#">Go somewhere</CButton>
                 </CCardBody>
               </CCard>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -497,7 +497,7 @@ const Cards = () => {
               Similar to headers and footers, cards can include top and bottom &#34;image
               caps&#34;—images at the top or bottom of a card.
             </p>
-            <DocsExample href="components/card/#image-caps">
+            <a href="components/card/#image-caps">
               <CRow>
                 <CCol lg={6}>
                   <CCard className="mb-3">
@@ -530,7 +530,7 @@ const Cards = () => {
                   </CCard>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -547,7 +547,7 @@ const Cards = () => {
             <p className="text-medium-emphasis small">
               Use <code>color</code> property to change the appearance of a card.
             </p>
-            <DocsExample href="components/card/#background-and-color">
+            <a href="components/card/#background-and-color">
               <CRow>
                 {[
                   { color: 'primary', textColor: 'white' },
@@ -573,7 +573,7 @@ const Cards = () => {
                   </CCol>
                 ))}
               </CRow>
-            </DocsExample>
+            </a>
             <h3>Border</h3>
             <p className="text-medium-emphasis small">
               Use <a href="https://coreui.io/docs/utilities/borders/">border utilities</a> to change
@@ -581,7 +581,7 @@ const Cards = () => {
               <code>textColor</code> property on the <code>&lt;CCard&gt;</code> or a subset of the
               card&#39;s contents as shown below.
             </p>
-            <DocsExample href="components/card/#border">
+            <a href="components/card/#border">
               <CRow>
                 {[
                   { color: 'primary', textColor: 'primary' },
@@ -607,7 +607,7 @@ const Cards = () => {
                   </CCol>
                 ))}
               </CRow>
-            </DocsExample>
+            </a>
             <h3>Top border</h3>
             <p className="text-medium-emphasis small">
               Use <a href="https://coreui.io/docs/utilities/borders/">border utilities</a> to change
@@ -615,7 +615,7 @@ const Cards = () => {
               <code>textColor</code> property on the <code>&lt;CCard&gt;</code> or a subset of the
               card&#39;s contents as shown below.
             </p>
-            <DocsExample href="components/card/#top-border">
+            <a href="components/card/#top-border">
               <CRow>
                 {[
                   { color: 'primary', textColor: 'primary' },
@@ -644,7 +644,7 @@ const Cards = () => {
                   </CCol>
                 ))}
               </CRow>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -659,7 +659,7 @@ const Cards = () => {
               height columns. Card groups start off stacked and use <code>display: flex;</code> to
               become attached with uniform dimensions starting at the <code>sm</code> breakpoint.
             </p>
-            <DocsExample href="components/card/#card-groups">
+            <a href="components/card/#card-groups">
               <CCardGroup>
                 <CCard>
                   <CCardImage orientation="top" src={ReactImg} />
@@ -702,11 +702,11 @@ const Cards = () => {
                   </CCardBody>
                 </CCard>
               </CCardGroup>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               When using card groups with footers, their content will automatically line up.
             </p>
-            <DocsExample href="components/card/#card-groups">
+            <a href="components/card/#card-groups">
               <CCardGroup>
                 <CCard>
                   <CCardImage orientation="top" src={ReactImg} />
@@ -749,7 +749,7 @@ const Cards = () => {
                   </CCardFooter>
                 </CCard>
               </CCardGroup>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -767,7 +767,7 @@ const Cards = () => {
               cards on one column, and <code>md=&#123;&#123;cols: 1&#125;&#125;</code> splitting
               four cards to equal width across multiple rows, from the medium breakpoint up.
             </p>
-            <DocsExample href="components/card/#grid-cards">
+            <a href="components/card/#grid-cards">
               <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 2 }}>
                 <CCol xs>
                   <CCard>
@@ -830,12 +830,12 @@ const Cards = () => {
                   </CCard>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               Change it to <code>md=&#123;&#123; cols: 3&#125;&#125;</code> and you&#39;ll see the
               fourth card wrap.
             </p>
-            <DocsExample href="components/card/#grid-cards">
+            <a href="components/card/#grid-cards">
               <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
                 <CCol xs>
                   <CCard>
@@ -898,7 +898,7 @@ const Cards = () => {
                   </CCard>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

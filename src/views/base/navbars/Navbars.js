@@ -19,7 +19,7 @@ import {
   CDropdown,
   CButton,
 } from '@coreui/react'
-import { DocsLink } from 'src/components'
+
 
 const CNavbars = () => {
   const [visible, setVisible] = useState(false)
@@ -31,7 +31,7 @@ const CNavbars = () => {
       <CCard className="mb-4">
         <CCardHeader>
           CNavbar
-          <DocsLink name="CNavbar" />
+          <a name="CNavbar" />
         </CCardHeader>
         <CCardBody>
           <CNavbar expandable="sm" color="info">

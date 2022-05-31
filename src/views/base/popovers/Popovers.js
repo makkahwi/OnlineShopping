@@ -1,12 +1,12 @@
 import React from 'react'
 import { CButton, CCard, CCardBody, CCardHeader, CPopover, CRow, CCol } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const Popovers = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Popover" href="components/popover" />
+        <a name="Popover" href="components/popover" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -14,7 +14,7 @@ const Popovers = () => {
             <strong>React Popover</strong> <small>Basic example</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="components/popover">
+            <a href="components/popover">
               <CPopover
                 title="Popover title"
                 content="And here’s some amazing content. It’s very engaging. Right?"
@@ -24,7 +24,7 @@ const Popovers = () => {
                   Click to toggle popover
                 </CButton>
               </CPopover>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -38,7 +38,7 @@ const Popovers = () => {
               Four options are available: top, right, bottom, and left aligned. Directions are
               mirrored when using CoreUI for React in RTL.
             </p>
-            <DocsExample href="components/popover#four-directions">
+            <a href="components/popover#four-directions">
               <CPopover
                 content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
                 placement="top"
@@ -63,7 +63,7 @@ const Popovers = () => {
               >
                 <CButton color="secondary">Popover on left</CButton>
               </CPopover>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

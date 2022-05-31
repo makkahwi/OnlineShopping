@@ -2,13 +2,13 @@ import React from 'react'
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilBell } from '@coreui/icons'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const Buttons = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Button" href="components/buttons" />
+        <a name="Button" href="components/buttons" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -22,7 +22,7 @@ const Buttons = () => {
               it. CoreUI buttons are used to initialize operations, both in the background or
               foreground of an experience.
             </p>
-            <DocsExample href="components/buttons">
+            <a href="components/buttons">
               {['normal', 'active', 'disabled'].map((state, index) => (
                 <CRow className="align-items-center mb-3" key={index}>
                   <CCol xs={12} xl={2} className="mb-3 mb-xl-0">
@@ -52,7 +52,7 @@ const Buttons = () => {
                   </CCol>
                 </CRow>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -65,7 +65,7 @@ const Buttons = () => {
             <p className="text-medium-emphasis small">
               You can combine button with our <a href="https://icons.coreui.io/">CoreUI Icons</a>.
             </p>
-            <DocsExample href="components/buttons">
+            <a href="components/buttons">
               {['normal', 'active', 'disabled'].map((state, index) => (
                 <CRow className="align-items-center mb-3" key={index}>
                   <CCol xs={12} xl={2} className="mb-3 mb-xl-0">
@@ -99,7 +99,7 @@ const Buttons = () => {
                   </CCol>
                 </CRow>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -120,7 +120,7 @@ const Buttons = () => {
               should be given a <code>role=&#34;button&#34;</code> to adequately communicate their
               meaning to assistive technologies such as screen readers.
             </p>
-            <DocsExample href="components/buttons#button-components">
+            <a href="components/buttons#button-components">
               <CButton component="a" color="primary" href="#" role="button">
                 Link
               </CButton>
@@ -130,7 +130,7 @@ const Buttons = () => {
               <CButton component="input" type="button" color="primary" value="Input" />
               <CButton component="input" type="submit" color="primary" value="Submit" />
               <CButton component="input" type="reset" color="primary" value="Reset" />
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -144,7 +144,7 @@ const Buttons = () => {
               If you need a button, but without the strong background colors. Set{' '}
               <code>variant=&#34;outline&#34;</code> prop to remove all background colors.
             </p>
-            <DocsExample href="components/buttons#outline-buttons">
+            <a href="components/buttons#outline-buttons">
               {['normal', 'active', 'disabled'].map((state, index) => (
                 <CRow className="align-items-center mb-3" key={index}>
                   <CCol xs={12} xl={2} className="mb-3 mb-xl-0">
@@ -174,7 +174,7 @@ const Buttons = () => {
                   </CCol>
                 </CRow>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -188,7 +188,7 @@ const Buttons = () => {
               If you need a ghost variant of button, set <code>variant=&#34;ghost&#34;</code> prop
               to remove all background colors.
             </p>
-            <DocsExample href="components/buttons#ghost-buttons">
+            <a href="components/buttons#ghost-buttons">
               {['normal', 'active', 'disabled'].map((state, index) => (
                 <CRow className="align-items-center mb-3" key={index}>
                   <CCol xs={12} xl={2} className="mb-3 mb-xl-0">
@@ -218,7 +218,7 @@ const Buttons = () => {
                   </CCol>
                 </CRow>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -232,22 +232,22 @@ const Buttons = () => {
               Larger or smaller buttons? Add <code>size=&#34;lg&#34;</code> or{' '}
               <code>size=&#34;sm&#34;</code> for additional sizes.
             </p>
-            <DocsExample href="components/buttons#sizes">
+            <a href="components/buttons#sizes">
               <CButton color="primary" size="lg">
                 Large button
               </CButton>
               <CButton color="secondary" size="lg">
                 Large button
               </CButton>
-            </DocsExample>
-            <DocsExample href="components/buttons#sizes">
+            </a>
+            <a href="components/buttons#sizes">
               <CButton color="primary" size="sm">
                 Small button
               </CButton>
               <CButton color="secondary" size="sm">
                 Small button
               </CButton>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -257,7 +257,7 @@ const Buttons = () => {
             <strong>React Button</strong> <small>Pill</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="components/buttons#pill-buttons">
+            <a href="components/buttons#pill-buttons">
               {[
                 'primary',
                 'secondary',
@@ -272,7 +272,7 @@ const Buttons = () => {
                   {color.charAt(0).toUpperCase() + color.slice(1)}
                 </CButton>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -282,7 +282,7 @@ const Buttons = () => {
             <strong>React Button</strong> <small>Square</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="components/buttons#square">
+            <a href="components/buttons#square">
               {[
                 'primary',
                 'secondary',
@@ -297,7 +297,7 @@ const Buttons = () => {
                   {color.charAt(0).toUpperCase() + color.slice(1)}
                 </CButton>
               ))}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -313,14 +313,14 @@ const Buttons = () => {
               <code>pointer-events: none</code> applied to, disabling hover and active states from
               triggering.
             </p>
-            <DocsExample href="components/buttons#disabled-state">
+            <a href="components/buttons#disabled-state">
               <CButton color="primary" size="lg" disabled>
                 Primary button
               </CButton>
               <CButton color="secondary" size="lg" disabled>
                 Button
               </CButton>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               Disabled buttons using the <code>&lt;a&gt;</code> component act a little different:
             </p>
@@ -331,14 +331,14 @@ const Buttons = () => {
               <code>aria-disabled=&#34;true&#34;</code> attribute to show the state of the component
               to assistive technologies.
             </p>
-            <DocsExample href="components/buttons#disabled-state">
+            <a href="components/buttons#disabled-state">
               <CButton component="a" href="#" color="primary" size="lg" disabled>
                 Primary link
               </CButton>
               <CButton component="a" href="#" color="secondary" size="lg" disabled>
                 Link
               </CButton>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -351,49 +351,49 @@ const Buttons = () => {
             <p className="text-medium-emphasis small">
               Create buttons that span the full width of a parent—by using utilities.
             </p>
-            <DocsExample href="components/buttons#block-buttons">
+            <a href="components/buttons#block-buttons">
               <div className="d-grid gap-2">
                 <CButton color="primary">Button</CButton>
                 <CButton color="primary">Button</CButton>
               </div>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               Here we create a responsive variation, starting with vertically stacked buttons until
               the <code>md</code> breakpoint, where <code>.d-md-block</code> replaces the{' '}
               <code>.d-grid</code> class, thus nullifying the <code>gap-2</code> utility. Resize
               your browser to see them change.
             </p>
-            <DocsExample href="components/buttons#block-buttons">
+            <a href="components/buttons#block-buttons">
               <div className="d-grid gap-2 d-md-block">
                 <CButton color="primary">Button</CButton>
                 <CButton color="primary">Button</CButton>
               </div>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               You can adjust the width of your block buttons with grid column width classes. For
               example, for a half-width &#34;block button&#34;, use <code>.col-6</code>. Center it
               horizontally with <code>.mx-auto</code>, too.
             </p>
-            <DocsExample href="components/buttons#block-buttons">
+            <a href="components/buttons#block-buttons">
               <div className="d-grid gap-2 col-6 mx-auto">
                 <CButton color="primary">Button</CButton>
                 <CButton color="primary">Button</CButton>
               </div>
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               Additional utilities can be used to adjust the alignment of buttons when horizontal.
               Here we&#39;ve taken our previous responsive example and added some flex utilities and
               a margin utility on the button to right align the buttons when they&#39;re no longer
               stacked.
             </p>
-            <DocsExample href="components/buttons#block-buttons">
+            <a href="components/buttons#block-buttons">
               <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                 <CButton color="primary" className="me-md-2">
                   Button
                 </CButton>
                 <CButton color="primary">Button</CButton>
               </div>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

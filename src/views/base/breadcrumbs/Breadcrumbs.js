@@ -9,13 +9,13 @@ import {
   CRow,
   CLink,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const Breadcrumbs = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Breadcrumb" href="components/breadcrumb" />
+        <a name="Breadcrumb" href="components/breadcrumb" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -38,7 +38,7 @@ const Breadcrumbs = () => {
               </a>
               .
             </p>
-            <DocsExample href="components/breadcrumb">
+            <a href="components/breadcrumb">
               <CBreadcrumb>
                 <CBreadcrumbItem>
                   <CLink href="#">Home</CLink>
@@ -66,7 +66,7 @@ const Breadcrumbs = () => {
                 </CBreadcrumbItem>
                 <CBreadcrumbItem active>Bootstrap</CBreadcrumbItem>
               </CBreadcrumb>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

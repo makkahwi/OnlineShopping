@@ -15,7 +15,7 @@ import {
   CRow,
   CTooltip,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const LiveDemo = () => {
   const [visible, setVisible] = useState(false)
@@ -461,7 +461,7 @@ const Modals = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Modal" href="components/modal" />
+        <a name="Modal" href="components/modal" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -476,7 +476,7 @@ const Modals = () => {
               include modal headers with dismiss actions whenever possible, or provide another
               explicit dismiss action.
             </p>
-            <DocsExample href="components/modal">
+            <a href="components/modal">
               <CModal
                 className="show d-block position-static"
                 backdrop={false}
@@ -493,7 +493,7 @@ const Modals = () => {
                   <CButton color="primary">Save changes</CButton>
                 </CModalFooter>
               </CModal>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -507,7 +507,7 @@ const Modals = () => {
               Toggle a working modal demo by clicking the button below. It will slide down and fade
               in from the top of the page.
             </p>
-            <DocsExample href="components/modal#live-demo">{LiveDemo()}</DocsExample>
+            <a href="components/modal#live-demo">{LiveDemo()}</a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -522,7 +522,7 @@ const Modals = () => {
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
             </p>
-            <DocsExample href="components/modal#static-backdrop">{StaticBackdrop()}</DocsExample>
+            <a href="components/modal#static-backdrop">{StaticBackdrop()}</a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -537,16 +537,16 @@ const Modals = () => {
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
             </p>
-            <DocsExample href="components/modal#scrolling-long-content">
+            <a href="components/modal#scrolling-long-content">
               {ScrollingLongContent()}
-            </DocsExample>
+            </a>
             <p className="text-medium-emphasis small">
               You can also create a scrollable modal that allows scroll the modal body by adding{' '}
               <code>scrollable</code> prop.
             </p>
-            <DocsExample href="components/modal#scrolling-long-content">
+            <a href="components/modal#scrolling-long-content">
               {ScrollingLongContent2()}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -560,12 +560,12 @@ const Modals = () => {
               Add <code>alignment=&#34;center&#34;</code> to <code>&lt;CModal&gt;</code> to
               vertically center the modal.
             </p>
-            <DocsExample href="components/modal#vertically-centered">
+            <a href="components/modal#vertically-centered">
               {VerticallyCentered()}
-            </DocsExample>
-            <DocsExample href="components/modal#vertically-centered">
+            </a>
+            <a href="components/modal#vertically-centered">
               {VerticallyCentered2()}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -580,9 +580,9 @@ const Modals = () => {
               modals as needed. When modals are closed, any tooltips and popovers within are also
               automatically dismissed.
             </p>
-            <DocsExample href="components/modal#tooltips-and-popovers">
+            <a href="components/modal#tooltips-and-popovers">
               {TooltipsPopovers()}
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -642,7 +642,7 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <DocsExample href="components/modal#optional-sizes">{OptionalSizes()}</DocsExample>
+            <a href="components/modal#optional-sizes">{OptionalSizes()}</a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -712,7 +712,7 @@ const Modals = () => {
                 </tr>
               </tbody>
             </table>
-            <DocsExample href="components/modal#fullscreen-modal">{FullscreenModal()}</DocsExample>
+            <a href="components/modal#fullscreen-modal">{FullscreenModal()}</a>
           </CCardBody>
         </CCard>
       </CCol>

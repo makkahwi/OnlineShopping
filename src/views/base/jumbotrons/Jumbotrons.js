@@ -1,6 +1,6 @@
 import React from 'react'
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CContainer, CRow } from '@coreui/react'
-import { DocsLink } from 'src/components'
+
 
 const Jumbotrons = () => {
   return (
@@ -8,7 +8,7 @@ const Jumbotrons = () => {
       <CCard className="mb-4">
         <CCardHeader>
           Jumbotron
-          <DocsLink name="CJumbotron" />
+          <a name="CJumbotron" />
         </CCardHeader>
         <CCardBody>
           <CContainer className="py-5" fluid>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CCollapse, CRow } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const Collapses = () => {
   const [visible, setVisible] = useState(false)
@@ -11,7 +11,7 @@ const Collapses = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Collapse" href="components/collapse" />
+        <a name="Collapse" href="components/collapse" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -20,7 +20,7 @@ const Collapses = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">You can use a link or a button component.</p>
-            <DocsExample href="components/collapse">
+            <a href="components/collapse">
               <CButton
                 href="#"
                 onClick={(e) => {
@@ -40,7 +40,7 @@ const Collapses = () => {
                   </CCardBody>
                 </CCard>
               </CCollapse>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -51,7 +51,7 @@ const Collapses = () => {
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">You can use a link or a button component.</p>
-            <DocsExample href="components/collapse#horizontal">
+            <a href="components/collapse#horizontal">
               <CButton
                 className="mb-3"
                 onClick={() => setVisibleHorizontal(!visibleHorizontal)}
@@ -70,7 +70,7 @@ const Collapses = () => {
                   </CCard>
                 </CCollapse>
               </div>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -83,7 +83,7 @@ const Collapses = () => {
             <p className="text-medium-emphasis small">
               A <code>&lt;CButton&gt;</code> can show and hide multiple elements.
             </p>
-            <DocsExample href="components/collapse#multiple-targets">
+            <a href="components/collapse#multiple-targets">
               <CButton onClick={() => setVisibleA(!visibleA)}>Toggle first element</CButton>
               <CButton onClick={() => setVisibleB(!visibleB)}>Toggle second element</CButton>
               <CButton
@@ -118,7 +118,7 @@ const Collapses = () => {
                   </CCollapse>
                 </CCol>
               </CRow>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>

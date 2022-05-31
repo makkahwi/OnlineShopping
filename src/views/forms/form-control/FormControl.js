@@ -11,13 +11,13 @@ import {
   CFormTextarea,
   CRow,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+
 
 const FormControl = () => {
   return (
     <CRow>
       <CCol xs={12}>
-        <DocsCallout name="Form Control" href="forms/form-control" />
+        <a name="Form Control" href="forms/form-control" />
       </CCol>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -25,7 +25,7 @@ const FormControl = () => {
             <strong>React Form Control</strong>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/form-control">
+            <a href="forms/form-control">
               <CForm>
                 <div className="mb-3">
                   <CFormLabel htmlFor="exampleFormControlInput1">Email address</CFormLabel>
@@ -40,7 +40,7 @@ const FormControl = () => {
                   <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
                 </div>
               </CForm>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -54,7 +54,7 @@ const FormControl = () => {
               Set heights using <code>size</code> property like <code>size=&#34;lg&#34;</code> and{' '}
               <code>size=&#34;sm&#34;</code>.
             </p>
-            <DocsExample href="forms/form-control#sizing">
+            <a href="forms/form-control#sizing">
               <CFormInput
                 type="text"
                 size="lg"
@@ -74,7 +74,7 @@ const FormControl = () => {
                 placeholder="Small input"
                 aria-label="sm input example"
               />
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -88,7 +88,7 @@ const FormControl = () => {
               Add the <code>disabled</code> boolean attribute on an input to give it a grayed out
               appearance and remove pointer events.
             </p>
-            <DocsExample href="forms/form-control#disabled">
+            <a href="forms/form-control#disabled">
               <CFormInput
                 type="text"
                 placeholder="Disabled input"
@@ -104,7 +104,7 @@ const FormControl = () => {
                 readOnly
               />
               <br />
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -119,14 +119,14 @@ const FormControl = () => {
               the input&#39;s value. Read-only inputs appear lighter (just like disabled inputs),
               but retain the standard cursor.
             </p>
-            <DocsExample href="forms/form-control#readonly">
+            <a href="forms/form-control#readonly">
               <CFormInput
                 type="text"
                 placeholder="Readonly input here..."
                 aria-label="readonly input example"
                 readOnly
               />
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -141,7 +141,7 @@ const FormControl = () => {
               as plain text, use the <code>plainText</code> boolean property to remove the default
               form field styling and preserve the correct margin and padding.
             </p>
-            <DocsExample href="components/accordion">
+            <a href="components/accordion">
               <CRow className="mb-3">
                 <CFormLabel htmlFor="staticEmail" className="col-sm-2 col-form-label">
                   Email
@@ -164,8 +164,8 @@ const FormControl = () => {
                   <CFormInput type="password" id="inputPassword" />
                 </div>
               </CRow>
-            </DocsExample>
-            <DocsExample href="components/accordion">
+            </a>
+            <a href="components/accordion">
               <CForm className="row g-3">
                 <div className="col-auto">
                   <CFormLabel htmlFor="staticEmail2" className="visually-hidden">
@@ -191,7 +191,7 @@ const FormControl = () => {
                   </CButton>
                 </div>
               </CForm>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -201,7 +201,7 @@ const FormControl = () => {
             <strong>React Form Control</strong> <small>File input</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/form-control#file-input">
+            <a href="forms/form-control#file-input">
               <div className="mb-3">
                 <CFormLabel htmlFor="formFile">Default file input example</CFormLabel>
                 <CFormInput type="file" id="formFile" />
@@ -222,7 +222,7 @@ const FormControl = () => {
                 <CFormLabel htmlFor="formFileLg">Large file input example</CFormLabel>
                 <CFormInput type="file" size="lg" id="formFileLg" />
               </div>
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
@@ -232,7 +232,7 @@ const FormControl = () => {
             <strong>React Form Control</strong> <small>Color</small>
           </CCardHeader>
           <CCardBody>
-            <DocsExample href="forms/form-control#color">
+            <a href="forms/form-control#color">
               <CFormLabel htmlFor="exampleColorInput">Color picker</CFormLabel>
               <CFormInput
                 type="color"
@@ -240,7 +240,7 @@ const FormControl = () => {
                 defaultValue="#563d7c"
                 title="Choose your color"
               />
-            </DocsExample>
+            </a>
           </CCardBody>
         </CCard>
       </CCol>
