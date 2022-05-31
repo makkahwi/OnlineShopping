@@ -32,7 +32,7 @@ export default function Header() {
           <CNavItem>
             <Link to="/basket" className='text-success mx-2' style={{ textDecoration: "None" }}>
               <CIcon icon={cilBasket} size="lg" />
-
+              {" "}
               {basket.reduce((sum, order) => sum += order.count, 0)}
             </Link>
           </CNavItem>
