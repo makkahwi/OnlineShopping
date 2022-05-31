@@ -17,7 +17,11 @@ Develop an online shopping web application using react & node JS, your app shoul
 - Make order for selected items.
 - View previous orders.
 
-### Execution
+## Execution
+
+You may check the deployed version of the app on [Github Pages](https://github.com>)
+
+### How to start it locally
 
 You may clone the repo to your local machine to check it out yourself following these steps
 
