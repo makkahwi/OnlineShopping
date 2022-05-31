@@ -1,6 +1,6 @@
 # Online Shopping Web App - FE
 
-"Agents On Cloud" *Technical Assessment* for "React Developer" postion
+"Agents On Cloud" *Technical Assessment* for *React Developer* postion
 
 Develop an online shopping web application using react & node JS, your app should give the user ability to sign up as a seller or a shopper.
 
