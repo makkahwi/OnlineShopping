@@ -18,6 +18,10 @@ export default function Listings() {
   const [action, setAction] = useState("View")
   const [detailsData, setDetailsData] = useState({})
 
+  const onDetailsChange = (key, change) => {
+    setDetailsData(data => ({ ...data, [key]: change }))
+  };
+
   const actionsClick = (data, action) => {
     setOpen(true)
     setAction(action)
@@ -25,28 +29,40 @@ export default function Listings() {
   };
 
   const modelContent = () => (<>
-    {Object.keys(detailsData).map((key, i) => key == "image" ? (
-      <>
+    {Object.keys(detailsData).map((key, i) => key == "image" ?
+      action == "Update" ? (
+        <>
+          <div className="text-center" >
+            <CImage src={detailsData[key]} width={250} />
+          </div>
+          <CInputGroup className="mb-3" key={i}>
+            <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
+            <CFormInput defaultValue={detailsData[key]} disabled={action != "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
+          </CInputGroup>
+        </>
+      ) : (
+        <>
+          <CInputGroup className="mb-3" key={i}>
+            <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
+            <CImage src={detailsData[key]} width={250} />
+          </CInputGroup>
+        </>
+      )
+      : key != "id" && (
         <CInputGroup className="mb-3" key={i}>
           <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-          <CImage src={detailsData[key]} width={250} />
+          <CFormInput defaultValue={detailsData[key]} disabled={action != "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
         </CInputGroup>
-      </>
-    ) : key != "id" && (
-      <CInputGroup className="mb-3" key={i}>
-        <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-        <CFormInput defaultValue={detailsData[key]} disabled={action != "Update"} />
-      </CInputGroup>
-    ))}
+      ))}
   </>);
 
   const onSubmit = () => {
     action == "Update" ? (
-      console.log("Updating")
+      console.log("Updating", detailsData)
     ) : action == "Delete" ? (
-      console.log("Deleteing")
+      console.log("Deleteing", detailsData)
     ) :
-      console.log("Undefined Action")
+      console.log("Undefined Action", detailsData)
   };
 
   return (
