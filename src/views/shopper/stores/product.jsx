@@ -5,7 +5,7 @@ import Modal from '../../../components/modal';
 export default function Product({ product, onCancel }) {
   const [open, setOpen] = useState(product?.id ? true : false)
 
-  const modelContent = () => (
+  const modalContent = () => (
     <>
       <CContainer>
         <CRow >
@@ -15,7 +15,7 @@ export default function Product({ product, onCancel }) {
 
           <CCol md={9}>
             <h3>
-              {product.title}
+              {product.name}
             </h3>
           </CCol>
 
@@ -42,6 +42,6 @@ export default function Product({ product, onCancel }) {
   };
 
   return (
-    <Modal title={`Product View`} body="Body" open={open} setOpen={setOpen} data={product} content={modelContent()} onSubmit={() => onSubmit()} onCancel={onCancel} submitText={"Add to Basket"} />
+    <Modal title={`Product View`} body="Body" open={open} setOpen={setOpen} data={product} content={modalContent()} onSubmit={() => onSubmit()} onCancel={onCancel} submitText={"Add to Basket"} />
   )
 }

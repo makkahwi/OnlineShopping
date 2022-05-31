@@ -22,26 +22,26 @@ export default function Orders() {
     setDetailsData(data)
   };
 
-  const modelContent = () => (<>
-    {Object.keys(detailsData).map((key, i) => key == "image" ? (
+  const modalContent = () => (<>
+    {Object.keys(detailsData).map((key, i) => key === "image" ? (
       <>
         <CInputGroup className="mb-3" key={i}>
           <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
           <CImage src={detailsData[key]} width={250} />
         </CInputGroup>
       </>
-    ) : key != "id" && (
+    ) : key !== "id" && (
       <CInputGroup className="mb-3" key={i}>
         <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-        <CFormInput defaultValue={detailsData[key]} disabled={action != "Update"} />
+        <CFormInput defaultValue={detailsData[key]} disabled={action !== "Update"} />
       </CInputGroup>
     ))}
   </>);
 
   const onSubmit = () => {
-    action == "Update" ? (
+    action === "Update" ? (
       console.log("Updating")
-    ) : action == "Delete" ? (
+    ) : action === "Delete" ? (
       console.log("Deleteing")
     ) :
       console.log("Undefined Action")
@@ -125,7 +125,7 @@ export default function Orders() {
             </CTableFoot>
           </CTable>
 
-          <Modal title={`Order ${action}`} body="Body" open={open} setOpen={setOpen} action={action} data={detailsData} content={modelContent()} onSubmit={() => onSubmit()} />
+          <Modal title={`Order ${action}`} body="Body" open={open} setOpen={setOpen} action={action} data={detailsData} content={modalContent()} onSubmit={() => onSubmit()} />
         </>
       }
     />

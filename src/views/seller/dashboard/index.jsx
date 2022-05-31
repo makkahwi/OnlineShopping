@@ -250,7 +250,7 @@ export default function Dashboard() {
           <CRow xs={{ cols: 1 }} md={{ cols: 5 }} className="text-center">
             {progressExample.map((item, index) => (
               <CCol className="mb-sm-2 mb-0" key={index}>
-                <div className="text-medium-emphasis">{item.title}</div>
+                <div className="text-medium-emphasis">{item.name}</div>
                 <strong>
                   {item.value} ({item.percent}%)
                 </strong>
@@ -289,7 +289,7 @@ export default function Dashboard() {
                   {progressGroupExample1.map((item, index) => (
                     <div className="progress-group mb-4" key={index}>
                       <div className="progress-group-prepend">
-                        <span className="text-medium-emphasis small">{item.title}</span>
+                        <span className="text-medium-emphasis small">{item.name}</span>
                       </div>
                       <div className="progress-group-bars">
                         <CProgress thin color="info" value={item.value1} />
@@ -321,7 +321,7 @@ export default function Dashboard() {
                     <div className="progress-group mb-4" key={index}>
                       <div className="progress-group-header">
                         <CIcon className="me-2" icon={item.icon} size="lg" />
-                        <span>{item.title}</span>
+                        <span>{item.name}</span>
                         <span className="ms-auto fw-semibold">{item.value}%</span>
                       </div>
                       <div className="progress-group-bars">
@@ -336,7 +336,7 @@ export default function Dashboard() {
                     <div className="progress-group" key={index}>
                       <div className="progress-group-header">
                         <CIcon className="me-2" icon={item.icon} size="lg" />
-                        <span>{item.title}</span>
+                        <span>{item.name}</span>
                         <span className="ms-auto fw-semibold">
                           {item.value}{' '}
                           <span className="text-medium-emphasis small">({item.percent}%)</span>

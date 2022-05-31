@@ -12,8 +12,8 @@ export default function Stores({ setStore }) {
       name: "Foodo",
       location: "Zarqa'",
       products: [
-        { id: 1, image: tempImage, title: "Product 1", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, title: "Product 2", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 1, image: tempImage, name: "Product 1", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 2, image: tempImage, name: "Product 2", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -21,8 +21,8 @@ export default function Stores({ setStore }) {
       name: "FoodX",
       location: "Ma'an",
       products: [
-        { id: 1, image: tempImage, title: "Product 3", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, title: "Product 4", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 1, image: tempImage, name: "Product 3", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 2, image: tempImage, name: "Product 4", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -30,8 +30,8 @@ export default function Stores({ setStore }) {
       name: "Zaki",
       location: "Ma'an",
       products: [
-        { id: 1, image: tempImage, title: "Product 5", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, title: "Product 6", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 1, image: tempImage, name: "Product 5", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 2, image: tempImage, name: "Product 6", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -39,8 +39,8 @@ export default function Stores({ setStore }) {
       name: "Yuck",
       location: "Aqaba",
       products: [
-        { id: 1, image: tempImage, title: "Product 7", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, title: "Product 8", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 1, image: tempImage, name: "Product 7", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 2, image: tempImage, name: "Product 8", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     },
     {
@@ -48,8 +48,8 @@ export default function Stores({ setStore }) {
       name: "Lazeez",
       location: "Mafraq",
       products: [
-        { id: 1, image: tempImage, title: "Product 9", desc: "Nice", price: 60, stock: 910, sold: 90 },
-        { id: 2, image: tempImage, title: "Product 10", desc: "Good", price: 50, stock: 159, sold: 91 }
+        { id: 1, image: tempImage, name: "Product 9", desc: "Nice", price: 60, stock: 910, sold: 90 },
+        { id: 2, image: tempImage, name: "Product 10", desc: "Good", price: 50, stock: 159, sold: 91 }
       ]
     }
   ];
@@ -79,7 +79,7 @@ export default function Stores({ setStore }) {
                       <CCard onClick={() => setProduct(product)}>
                         <CImage src={product.image} width={150} />
                         <br />
-                        {product.title}
+                        {product.name}
                       </CCard>
                     </CCol>
                   ))}

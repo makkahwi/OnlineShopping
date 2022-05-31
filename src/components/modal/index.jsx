@@ -40,7 +40,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
             {cancelText || "Cancel"}
           </CButton>
 
-          {action != "View" ? (
+          {action !== "View" ? (
             <CButton color={color()} onClick={onSubmit}>
               {submitText || "Submit"}
             </CButton>

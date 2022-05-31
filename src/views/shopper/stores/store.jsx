@@ -87,7 +87,7 @@ export default function Store({ store, setStore }) {
                 <a onClick={() => setProduct(product)}>
                   <CImage src={product.image} width={150} />
                   <br />
-                  {product.title}
+                  {product.name}
                 </a>
               </CCol>
             ))}
