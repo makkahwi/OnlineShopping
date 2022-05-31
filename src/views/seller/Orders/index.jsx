@@ -40,10 +40,10 @@ export default function Orders() {
   </>);
 
   const onSubmit = () => {
-    action == "Update" ? (
-      console.log("Updating")
-    ) : action == "Delete" ? (
-      console.log("Deleteing")
+    action == "Shipped" ? (
+      console.log("Shipping", detailsData)
+    ) : action == "Cancelled" ? (
+      console.log("Cancelling", detailsData)
     ) :
       console.log("Undefined Action")
   };
@@ -96,7 +96,7 @@ export default function Orders() {
                       </CTooltip>
 
                       <CTooltip
-                        content="Mark as Canceled"
+                        content="Mark as Cancelled"
                         placement="top"
                       >
                         <CButton color="danger" onClick={() => actionsClick(order, "Cancelled")}>
