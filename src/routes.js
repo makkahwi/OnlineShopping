@@ -2,6 +2,7 @@ import React, { lazy } from 'react'
 
 const Dashboard = lazy(() => import('./views/seller/dashboard'))
 const Listings = lazy(() => import('./views/seller/Listings'))
+const Orders = lazy(() => import('./views/seller/Orders'))
 
 
 // Base
@@ -58,6 +59,7 @@ const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/listings', name: 'Listings', element: Listings },
+  { path: '/orders', name: 'Orders', element: Orders },
 
 
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
