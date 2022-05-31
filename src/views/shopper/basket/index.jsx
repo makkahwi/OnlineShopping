@@ -45,6 +45,8 @@ export default function Basket() {
 
                   <CTableDataCell>${item.price}</CTableDataCell>
 
+                  <CTableDataCell>${item.price * item.count}</CTableDataCell>
+
                   <CTableDataCell>
                     <CButtonGroup size="sm">
                       <CTooltip
@@ -78,11 +80,12 @@ export default function Basket() {
               <CTableRow>
                 <CTableHeaderCell></CTableHeaderCell>
                 <CTableHeaderCell></CTableHeaderCell>
+                <CTableHeaderCell></CTableHeaderCell>
 
                 <CTableHeaderCell>
                   <h4>
                     {"$"}
-                    {items.reduce((sum, order) => sum + order.price, 0)}
+                    {items.reduce((sum, order) => sum + (order.price * order.count), 0)}
                   </h4>
                 </CTableHeaderCell>
 
