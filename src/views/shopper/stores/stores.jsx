@@ -1,5 +1,6 @@
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CImage, CRow } from '@coreui/react'
-import React from 'react'
+import React, { useState } from 'react'
+import Product from "./product"
 
 export default function Stores({ setStore }) {
 
@@ -53,6 +54,8 @@ export default function Stores({ setStore }) {
     }
   ];
 
+  const [product, setProduct] = useState({})
+
   return (
     <>
       <CCard className="mb-4">
@@ -72,12 +75,12 @@ export default function Stores({ setStore }) {
 
                 <CRow>
                   {store.products.map((product, i) => (
-                    <CCol md={6} className="text-center">
-                      <a href='#'>
+                    <CCol md={6} className="text-center" key={i}>
+                      <CCard onClick={() => setProduct(product)}>
                         <CImage src={product.image} width={150} />
                         <br />
                         {product.title}
-                      </a>
+                      </CCard>
                     </CCol>
                   ))}
                 </CRow>
@@ -97,6 +100,8 @@ export default function Stores({ setStore }) {
           </CRow>
         </CCardBody>
       </CCard>
+
+      {product?.id && <Product product={product} onCancel={() => setProduct({})} />}
     </>
   )
 };

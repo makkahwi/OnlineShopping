@@ -1,7 +1,10 @@
 import { CButton, CCard, CCardBody, CCardHeader, CCol, CContainer, CImage, CRow, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow } from '@coreui/react';
-import React from 'react';
+import React, { useState } from 'react';
+import Product from "./product"
 
 export default function Store({ store, setStore }) {
+
+  const [product, setProduct] = useState({})
 
   return (
     <>
@@ -81,7 +84,7 @@ export default function Store({ store, setStore }) {
           <CRow>
             {store.products.map((product, i) => (
               <CCol md={4} className="text-center" key={i}>
-                <a href='#'>
+                <a onClick={() => setProduct(product)}>
                   <CImage src={product.image} width={150} />
                   <br />
                   {product.title}
@@ -91,6 +94,8 @@ export default function Store({ store, setStore }) {
           </CRow>
         </CCardBody>
       </CCard>
+
+      {product?.id && <Product product={product} onCancel={() => setProduct({})} />}
     </>
   )
 };

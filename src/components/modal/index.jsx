@@ -7,7 +7,7 @@ import {
 } from '@coreui/react'
 import React from 'react'
 
-export default function Modal({ title, content, submitText, cancelText, open, setOpen, action, onSubmit }) {
+export default function Modal({ title, content, submitText, cancelText, open, setOpen, action, onSubmit, onCancel }) {
 
   const color = () => {
     switch (action) {
@@ -24,7 +24,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
 
   return (
     <>
-      <CModal visible={open} onClose={() => setOpen(false)}>
+      <CModal visible={open} onClose={() => { setOpen(false); onCancel }}>
         <CModalHeader>
           <CModalTitle className={`text-${color()}`}>
             {title || "Title"}
@@ -36,7 +36,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
         </CModalBody>
 
         <CModalFooter>
-          <CButton color="secondary" onClick={() => setOpen(false)}>
+          <CButton color="secondary" onClick={() => { setOpen(false); onCancel() }}>
             {cancelText || "Cancel"}
           </CButton>
 
