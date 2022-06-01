@@ -36,4 +36,5 @@ You also may take a look at the commit messages to get an impression of the work
 #### Notes
 
 - As for the basket, I'm aware that ideally it should be stored in database, but I just built it redux-based to save time, and to show my ability to work with the important library of Redux. Anyway, it's included in my DB diagram.
+- I'm also fully aware that the app isn't really completed n there is enrmous work to to optimize, to have better engemanet with user (like warning & error notifications) & better mobile-friendly setup. I assuemed it's about the showing the core build of the sysmte.
 - This is based on [CoreUI React Template](https://coreui.io/react/docs/)
