@@ -11,7 +11,7 @@ const get = id => {
 };
 
 const create = data => {
-  return api.post(`${path}`, data);
+  return api.post(`${path}`, { data });
 };
 
 const update = (id, data) => {

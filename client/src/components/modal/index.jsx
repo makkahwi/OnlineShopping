@@ -12,6 +12,7 @@ export default function Modal({ title, content, submitText, cancelText, open, se
   const color = () => {
     switch (action) {
       case "View": return "info";
+      case "Create": return "success";
       case "Update": return "warning";
       case "Delete": return "danger";
       case "Shipped": return "success";

@@ -29,7 +29,7 @@
     "desc": {
       "type": "text",
       "required": true,
-      "minLength": 50
+      "minLength": 5
     },
     "image": {
       "type": "string",

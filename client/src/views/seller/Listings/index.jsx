@@ -1,4 +1,4 @@
-import { cilNewspaper, cilPencil, cilTrash } from '@coreui/icons';
+import { cilNewspaper, cilPencil, cilPlus, cilTrash } from '@coreui/icons';
 import CIcon from '@coreui/icons-react';
 import { CButton, CButtonGroup, CFormInput, CImage, CInputGroup, CInputGroupText, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow, CTooltip } from '@coreui/react';
 import React, { useEffect, useState } from 'react';
@@ -26,31 +26,33 @@ export default function Listings() {
   };
 
   const modalContent = () => (<>
-    {Object.keys(detailsData).filter(key => key !== "id" && key !== "createdAt" && key !== "updatedAt").map((key, i) => key === "image" ?
-      action === "Update" ? (
-        <>
-          <div className="text-center" >
-            <CImage src={detailsData[key]} width={250} />
-          </div>
-          <CInputGroup className="mb-3" key={i + i}>
+    {Object.keys(detailsData).filter(key => key !== "id" && key !== "createdAt" && key !== "updatedAt").map((key, i) => (
+      key === "image" ?
+        (action === "Update" || action === "Create") ? (
+          <>
+            <div className="text-center" >
+              <CImage src={detailsData[key]} width={250} />
+            </div>
+            <CInputGroup className="mb-3" key={i + i}>
+              <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
+              <CFormInput defaultValue={detailsData[key]} disabled={(action !== "Update" && action !== "Create")} onChange={e => onDetailsChange(key, e.target.value)} />
+            </CInputGroup>
+          </>
+        ) : (
+          <>
+            <CInputGroup className="mb-3" key={i + i + i}>
+              <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
+              <CImage src={detailsData[key]} width={250} />
+            </CInputGroup>
+          </>
+        )
+        : (
+          <CInputGroup className="mb-3" key={i + i + i + i}>
             <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-            <CFormInput defaultValue={detailsData[key]} disabled={action !== "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
+            <CFormInput defaultValue={detailsData[key]} type={(key === "price" || key === "stock") && "number"} disabled={(action !== "Update" && action !== "Create")} onChange={e => onDetailsChange(key, e.target.value)} />
           </CInputGroup>
-        </>
-      ) : (
-        <>
-          <CInputGroup className="mb-3" key={i + i + i}>
-            <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-            <CImage src={detailsData[key]} width={250} />
-          </CInputGroup>
-        </>
-      )
-      : (
-        <CInputGroup className="mb-3" key={i + i + i + i}>
-          <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
-          <CFormInput defaultValue={detailsData[key]} disabled={action !== "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
-        </CInputGroup>
-      ))}
+        )
+    ))}
   </>);
 
   const callData = () => {
@@ -78,26 +80,36 @@ export default function Listings() {
   }, [])
 
   const onSubmit = async () => {
-    action === "Update" ? (
-      await ProductsApi.update(detailsData.id, detailsData)
+    action === "Create" ? (
+      await ProductsApi.create(detailsData)
         .then(res => {
-          console.log("Updated", res)
+          console.log("Created", res)
           onSuccees()
         })
         .catch(e => {
-          console.log("Product Update Error", e)
-        })
-    ) : action === "Delete" ? (
-      await ProductsApi.remove(detailsData.id)
-        .then(res => {
-          console.log("Deleted", res)
-          onSuccees()
-        })
-        .catch(e => {
-          console.log("Product Delete Error", e)
+          console.log("Product Create Error", e)
         })
     ) :
-      console.log("Undefined Action", detailsData)
+      action === "Update" ? (
+        await ProductsApi.update(detailsData.id, detailsData)
+          .then(res => {
+            console.log("Updated", res)
+            onSuccees()
+          })
+          .catch(e => {
+            console.log("Product Update Error", e)
+          })
+      ) : action === "Delete" ? (
+        await ProductsApi.remove(detailsData.id)
+          .then(res => {
+            console.log("Deleted", res)
+            onSuccees()
+          })
+          .catch(e => {
+            console.log("Product Delete Error", e)
+          })
+      ) :
+        console.log("Undefined Action", detailsData)
   };
 
   return (
@@ -113,6 +125,16 @@ export default function Listings() {
                 <CTableHeaderCell>Title</CTableHeaderCell>
                 <CTableHeaderCell>Desc</CTableHeaderCell>
                 <CTableHeaderCell>Actions</CTableHeaderCell>
+                <CTableHeaderCell>
+                  <CTooltip
+                    content="Create"
+                    placement="top"
+                  >
+                    <CButton color="success" onClick={() => actionsClick(Object.keys(listings[0]).filter(key => key !== "id" && key !== "createdAt" && key !== "updatedAt").reduce((final, key) => ({ ...final, [key]: '' }), {}), "Create")}>
+                      <CIcon className='text-light' icon={cilPlus} />
+                    </CButton>
+                  </CTooltip>
+                </CTableHeaderCell>
               </CTableRow>
             </CTableHead>
 
@@ -129,7 +151,7 @@ export default function Listings() {
 
                   <CTableDataCell>{listing.desc}</CTableDataCell>
 
-                  <CTableDataCell>
+                  <CTableDataCell colSpan={2}>
                     <CButtonGroup size="sm">
                       <CTooltip
                         content="View"
