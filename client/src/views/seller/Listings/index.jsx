@@ -22,7 +22,7 @@ export default function Listings() {
   const actionsClick = (data, action) => {
     setOpen(true)
     setAction(action)
-    setDetailsData(data)
+    setDetailsData(data || { name: "", price: 0, stock: 0, desc: "", image: "" })
   };
 
   const modalContent = () => (<>
