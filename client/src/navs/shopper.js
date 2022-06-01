@@ -7,7 +7,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Home',
-    to: '/stores',
+    to: '/',
     icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
   },
   {

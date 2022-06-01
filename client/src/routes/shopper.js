@@ -58,9 +58,9 @@ const Page404 = lazy(() => import('../views/base/pages/page404/Page404'))
 const Page500 = lazy(() => import('../views/base/pages/page500/Page500'))
 
 const routes = [
-  { path: '/stores', exact: true, name: 'Home', element: Landing },
-  { path: '/orders', name: 'Orders', element: Orders },
-  { path: '/basket', name: 'Basket', element: Basket },
+  { path: '/', exact: true, name: 'Home', element: Landing },
+  { path: '/orders', exact: true, name: 'Orders', element: Orders },
+  { path: '/basket', exact: true, name: 'Basket', element: Basket },
 
   // { path: '/listings', name: 'Listings', element: Listings },
 

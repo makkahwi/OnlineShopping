@@ -3,11 +3,12 @@ import CIcon from '@coreui/icons-react'
 import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import UsersApi from "../../api/user"
 
 const Login = () => {
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [loginData, setLoginData] = useState({})
 
@@ -18,8 +19,11 @@ const Login = () => {
   const onSubmission = async () => {
     await UsersApi.signIn(loginData)
       .then(res => {
-        console.log("Logged In")
+        console.log("Logged In", res)
         dispatch({ type: 'setJWT', jwtToken: res?.jwt })
+        dispatch({ type: 'setUsername', username: res?.user?.username })
+        dispatch({ type: 'setName', name: res?.user?.name })
+        navigate("/")
       })
       .catch(e => {
         console.log("User Login error", e)
@@ -52,7 +56,7 @@ const Login = () => {
                         <CInputGroupText>
                           <CIcon icon={cilUser} />
                         </CInputGroupText>
-                        <CFormInput placeholder="Username" autoComplete="username" onChange={e => loginDataUpdate("identifier", e.target.value)} />
+                        <CFormInput placeholder="Username" defaultValue={localStorage.getItem("username")} autoComplete="username" onChange={e => loginDataUpdate("identifier", e.target.value)} />
                       </CInputGroup>
 
                       <CInputGroup className="mb-4">

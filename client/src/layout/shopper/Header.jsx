@@ -1,6 +1,6 @@
 import { cilAccountLogout, cilBasket } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-import { CContainer, CHeader, CHeaderNav, CNavItem, CNavLink, CSidebarBrand } from '@coreui/react'
+import { CButton, CContainer, CHeader, CHeaderNav, CNavItem, CNavLink, CSidebarBrand } from '@coreui/react'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import navigation from '../../navs/shopper'
@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
   const basket = useSelector((state) => state.basket)
+  const dispatch = useDispatch();
 
   return (
     <CHeader position="sticky" className="mb-4">
@@ -38,8 +39,10 @@ export default function Header() {
           </CNavItem>
 
           <CNavItem>
-            <Link to="#" className='text-dark mx-2' style={{ textDecoration: "None" }}>
-              <CIcon icon={cilAccountLogout} size="lg" />
+            <Link to="">
+              <CButton variant='ghost' color='light' onClick={() => dispatch({ type: 'setJWT', jwtToken: "" })} className='text-dark mx-2' style={{ textDecoration: "None" }}>
+                <CIcon icon={cilAccountLogout} size="lg" />
+              </CButton>
             </Link>
           </CNavItem>
         </CHeaderNav>
