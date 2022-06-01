@@ -30,11 +30,11 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "orders"
     },
-    "products": {
+    "order_counts": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "orders"
+      "relation": "oneToMany",
+      "target": "api::order-count.order-count",
+      "mappedBy": "order"
     }
   }
 }
