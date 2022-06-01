@@ -23,6 +23,7 @@ const Login = () => {
         dispatch({ type: 'setJWT', jwtToken: res?.jwt })
         dispatch({ type: 'setUsername', username: res?.user?.username })
         dispatch({ type: 'setName', name: res?.user?.name })
+        dispatch({ type: 'setSeller', seller: res?.user?.seller })
         navigate("/")
       })
       .catch(e => {

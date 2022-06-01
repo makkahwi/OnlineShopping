@@ -78,6 +78,10 @@
       "relation": "oneToOne",
       "target": "api::store.store",
       "inversedBy": "user"
+    },
+    "seller": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

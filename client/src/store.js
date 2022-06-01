@@ -5,6 +5,7 @@ const initialState = {
   jwtToken: localStorage.getItem("jwtToken"),
   name: localStorage.getItem("name"),
   username: localStorage.getItem("username"),
+  seller: localStorage.getItem("seller"),
   basket: []
 }
 
@@ -23,9 +24,13 @@ const changeState = (state = initialState, { type, ...rest }) => {
     case 'setName':
       localStorage.setItem("name", rest.name);
       return { ...state, ...rest }
+    case 'setSeller':
+      localStorage.setItem("seller", rest.seller);
+      return { ...state, ...rest }
     case "signout":
       localStorage.setItem("jwtToken", null);
       localStorage.setItem("name", null);
+      localStorage.setItem("seller", null);
       return {
         ...state,
         jwtToken: "",

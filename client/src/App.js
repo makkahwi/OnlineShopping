@@ -6,17 +6,19 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const Landing = lazy(() => import('./views/landing'))
 const Registeration = lazy(() => import('./views/registeration'))
-const Layout = lazy(() => import('./layout/shopper'))
+const SellerLayout = lazy(() => import('./layout/seller'))
+const ShopperLayout = lazy(() => import('./layout/shopper'))
 
 export default function App() {
   const jwtToken = useSelector((state) => state.jwtToken)
+  const seller = useSelector((state) => state.seller)
 
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           {jwtToken?.length > 20 ? (
-            <Route path="*" name="Home" element={<Layout />} />
+            <Route path="*" name="Home" element={seller ? <SellerLayout /> : <ShopperLayout />} />
           ) : (
             <>
               <Route exact path="/" name="Landing" element={<Landing />} />

@@ -12,7 +12,7 @@ export default function Registeration() {
   const [regData, setRegData] = useState({})
 
   const onSubmission = async () => {
-    await UsersApi.register(regData)
+    await UsersApi.register({ ...regData, seller: regData.address ? true : false })
       .then(async (res) => {
         console.log("res", res)
         await StoresApi.create({ ...regData, user: res?.user?.id })

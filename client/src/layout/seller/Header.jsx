@@ -1,14 +1,9 @@
-import { cilAccountLogout, cilBell, cilList, cilMenu } from '@coreui/icons'
+import { cilAccountLogout, cilMenu } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-import {
-  CContainer,
-  CHeader,
-  CHeaderBrand, CHeaderNav,
-  CHeaderToggler, CNavItem, CNavLink
-} from '@coreui/react'
+import { CButton, CContainer, CHeader, CHeaderBrand, CHeaderNav, CHeaderToggler, CNavItem } from '@coreui/react'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const dispatch = useDispatch()
@@ -30,8 +25,10 @@ export default function Header() {
 
         <CHeaderNav>
           <CNavItem>
-            <Link to="#" className='text-dark mx-2' style={{ textDecoration: "None" }}>
-              <CIcon icon={cilAccountLogout} size="lg" />
+            <Link to="">
+              <CButton variant='ghost' color='light' onClick={() => dispatch({ type: 'setJWT', jwtToken: "" })} className='text-dark mx-2' style={{ textDecoration: "None" }}>
+                <CIcon icon={cilAccountLogout} size="lg" />
+              </CButton>
             </Link>
           </CNavItem>
         </CHeaderNav>
