@@ -1,21 +1,20 @@
-import { cilLockLocked, cilUser } from '@coreui/icons'
+import { cilCopy, cilHome, cilLockLocked, cilUser, cilUserFollow, cilUserPlus } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCol,
-  CContainer,
-  CForm,
-  CFormInput,
-  CInputGroup,
-  CInputGroupText,
-  CRow
-} from '@coreui/react'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
+import React, { useState } from 'react'
 
-const Registeration = () => {
+export default function Registeration() {
+
+  const [regData, setRegData] = useState({})
+
+  const onSubmission = async () => {
+    console.log("reg", regData)
+  };
+
+  const regDataUpdate = (key, value) => {
+    setRegData(data => ({ ...data, [key]: value }))
+  };
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -30,21 +29,21 @@ const Registeration = () => {
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
-                      <CIcon icon={cilUser} />
+                      <CIcon icon={cilUserPlus} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Username" autoComplete="username" />
+                    <CFormInput placeholder="Username" autoComplete="username" onChange={e => regDataUpdate("username", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Name" autoComplete="name" />
+                    <CFormInput placeholder="Name" autoComplete="name" onChange={e => regDataUpdate("name", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>@</CInputGroupText>
-                    <CFormInput placeholder="Email" autoComplete="email" />
+                    <CFormInput placeholder="Email" type="email" autoComplete="email" onChange={e => regDataUpdate("email", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
@@ -55,6 +54,7 @@ const Registeration = () => {
                       type="password"
                       placeholder="Password"
                       autoComplete="new-password"
+                      onChange={e => regDataUpdate("password", e.target.value)}
                     />
                   </CInputGroup>
 
@@ -66,11 +66,12 @@ const Registeration = () => {
                       type="password"
                       placeholder="Repeat password"
                       autoComplete="new-password"
+                      onChange={e => regDataUpdate("secpassword", e.target.value)}
                     />
                   </CInputGroup>
 
                   <div className="d-grid">
-                    <CButton color="success">Create Shopper Account</CButton>
+                    <CButton color="success" onClick={onSubmission}>Create Shopper Account</CButton>
                   </div>
                 </CForm>
               </CCardBody>
@@ -86,21 +87,35 @@ const Registeration = () => {
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
-                      <CIcon icon={cilUser} />
+                      <CIcon icon={cilUserFollow} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Username" autoComplete="username" />
+                    <CFormInput placeholder="Username" autoComplete="username" onChange={e => regDataUpdate("username", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Shop Name" autoComplete="name" />
+                    <CFormInput placeholder="Shop Name" autoComplete="name" onChange={e => regDataUpdate("name", e.target.value)} />
+                  </CInputGroup>
+
+                  <CInputGroup className="mb-3">
+                    <CInputGroupText>
+                      <CIcon icon={cilHome} />
+                    </CInputGroupText>
+                    <CFormInput placeholder="Shop Address" autoComplete="address" onChange={e => regDataUpdate("address", e.target.value)} />
+                  </CInputGroup>
+
+                  <CInputGroup className="mb-3">
+                    <CInputGroupText>
+                      <CIcon icon={cilCopy} />
+                    </CInputGroupText>
+                    <CFormInput placeholder="Logo Image Link" autoComplete="logo" onChange={e => regDataUpdate("logo", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>@</CInputGroupText>
-                    <CFormInput placeholder="Email" autoComplete="email" />
+                    <CFormInput placeholder="Email" type="email" autoComplete="email" onChange={e => regDataUpdate("email", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
@@ -111,6 +126,7 @@ const Registeration = () => {
                       type="password"
                       placeholder="Password"
                       autoComplete="new-password"
+                      onChange={e => regDataUpdate("password", e.target.value)}
                     />
                   </CInputGroup>
 
@@ -122,13 +138,12 @@ const Registeration = () => {
                       type="password"
                       placeholder="Repeat password"
                       autoComplete="new-password"
+                      onChange={e => regDataUpdate("secpassword", e.target.value)}
                     />
                   </CInputGroup>
 
                   <div className="d-grid">
-                    <Link to="/dashboard">
-                      <CButton color="success">Create Seller Account</CButton>
-                    </Link>
+                    <CButton color="success" onClick={() => onSubmission()}>Create Seller Account</CButton>
                   </div>
                 </CForm>
               </CCardBody>
@@ -138,6 +153,4 @@ const Registeration = () => {
       </CContainer>
     </div>
   )
-}
-
-export default Registeration
+};
