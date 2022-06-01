@@ -2,9 +2,13 @@ import { cilLockLocked, cilUser } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import UsersApi from "../../api/user"
 
 const Login = () => {
+  const dispatch = useDispatch()
+
   const [loginData, setLoginData] = useState({})
 
   const loginDataUpdate = (key, value) => {
@@ -12,15 +16,14 @@ const Login = () => {
   };
 
   const onSubmission = async () => {
-    console.log("Logined", loginData)
-    // await UsersApi.register(regData)
-    //   .then(res => {
-    //     navigate("/")
-    //     console.log("Registered", res)
-    //   })
-    //   .catch(e => {
-    //     console.log("User Creation error", e)
-    //   });
+    await UsersApi.signIn(loginData)
+      .then(res => {
+        console.log("Logged In")
+        dispatch({ type: 'setJWT', jwtToken: res.jwt })
+      })
+      .catch(e => {
+        console.log("User Login error", e)
+      });
   };
 
   return (

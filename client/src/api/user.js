@@ -7,7 +7,7 @@ const register = (data) => {
 };
 
 const signIn = data => {
-  return api.post(`/auth/local`, data);
+  return api.post(`/api/auth/local`, data);
 };
 
 const update = (id, data) => {

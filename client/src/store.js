@@ -14,6 +14,9 @@ const changeState = (state = initialState, { type, ...rest }) => {
       return { ...state, ...rest }
     case 'setBasket':
       return { ...state, ...rest }
+    case 'setJWT':
+      localStorage.setItem("jwtToken", rest.jwtToken);
+      return { ...state, ...rest }
     case "signout":
       localStorage.setItem("jwtToken", null);
       localStorage.setItem("name", null);
