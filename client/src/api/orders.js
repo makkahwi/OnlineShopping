@@ -3,7 +3,7 @@ import api from ".";
 const path = "/orders";
 
 const getAll = params => {
-  return api.get(`${path}?_sort=created_at:asc`, { params });
+  return api.get(`${path}?_sort=created_at:desc`, { params });
 };
 
 const get = id => {

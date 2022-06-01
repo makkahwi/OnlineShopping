@@ -3,7 +3,7 @@ import api from ".";
 const path = "/api/products";
 
 const getAll = params => {
-  return api.get(`${path}?_sort=created_at:asc`, { params });
+  return api.get(`${path}?_sort=created_at:desc`, { params });
 };
 
 const get = id => {
@@ -15,7 +15,7 @@ const create = data => {
 };
 
 const update = (id, data) => {
-  return api.put(`${path}/${id}`, data);
+  return api.put(`${path}/${id}`, { data });
 };
 
 const remove = id => {

@@ -32,28 +32,28 @@ export default function Listings() {
           <div className="text-center" >
             <CImage src={detailsData[key]} width={250} />
           </div>
-          <CInputGroup className="mb-3" key={i}>
+          <CInputGroup className="mb-3" key={i + i}>
             <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
             <CFormInput defaultValue={detailsData[key]} disabled={action !== "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
           </CInputGroup>
         </>
       ) : (
         <>
-          <CInputGroup className="mb-3" key={i}>
+          <CInputGroup className="mb-3" key={i + i + i}>
             <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
             <CImage src={detailsData[key]} width={250} />
           </CInputGroup>
         </>
       )
       : (
-        <CInputGroup className="mb-3" key={i}>
+        <CInputGroup className="mb-3" key={i + i + i + i}>
           <CInputGroupText className='text-capitalize'>{key}</CInputGroupText>
           <CFormInput defaultValue={detailsData[key]} disabled={action !== "Update"} onChange={e => onDetailsChange(key, e.target.value)} />
         </CInputGroup>
       ))}
   </>);
 
-  useEffect(() => {
+  const callData = () => {
     ProductsApi.getAll()
       .then(res => {
         console.log("Got All", res)
@@ -66,13 +66,23 @@ export default function Listings() {
           { id: 2, image: tempImage, name: "Product 2 Test", desc: "Good", price: 50, stock: 159, sold: 91 }
         ])
       })
+  }
+
+  const onSuccees = () => {
+    setOpen(false)
+    callData()
+  };
+
+  useEffect(() => {
+    callData()
   }, [])
 
   const onSubmit = async () => {
     action === "Update" ? (
-      await ProductsApi.update((detailsData.id, detailsData))
+      await ProductsApi.update(detailsData.id, detailsData)
         .then(res => {
           console.log("Updated", res)
+          onSuccees()
         })
         .catch(e => {
           console.log("Product Update Error", e)
@@ -81,6 +91,7 @@ export default function Listings() {
       await ProductsApi.remove(detailsData.id)
         .then(res => {
           console.log("Deleted", res)
+          onSuccees()
         })
         .catch(e => {
           console.log("Product Delete Error", e)
