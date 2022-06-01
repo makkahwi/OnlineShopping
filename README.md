@@ -19,7 +19,9 @@ Develop an online shopping web application using react & node JS, your app shoul
 
 ## Execution
 
-*I'm aware that the task isn't finished. Anyway, here's what I came to with the time I dedicated to fullfill the assignment. Looking forward to hear from you soon.*
+*I'm aware that the task isn't finished. Anyway, here's what I came to with the time I dedicated to fullfill the assignment.*
+*Functioning endpoints on both apps are the seller's.*
+*Looking forward to hear from you soon.*
 
 You may check both FE & BE built in seperate directories
 
