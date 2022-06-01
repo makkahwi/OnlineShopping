@@ -27,7 +27,7 @@ const Login = () => {
         navigate("/")
       })
       .catch(e => {
-        console.log("User Login error", e)
+        console.log("User Login Error", e)
       });
   };
 

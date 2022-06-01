@@ -21,11 +21,11 @@ export default function Registeration() {
             console.log("Registered")
           })
           .catch(e => {
-            console.log("Store Creation error", e)
+            console.log("Store Creation Error", e)
           })
       })
       .catch(e => {
-        console.log("User Creation error", e)
+        console.log("User Creation Error", e)
       });
   };
 
