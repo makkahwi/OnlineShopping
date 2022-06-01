@@ -1,22 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCardGroup,
-  CCol,
-  CContainer,
-  CForm,
-  CFormInput,
-  CInputGroup,
-  CInputGroupText,
-  CRow,
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
+import CIcon from '@coreui/icons-react'
+import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
+  const [loginData, setLoginData] = useState({})
+
+  const loginDataUpdate = (key, value) => {
+    setLoginData({ ...loginData, [key]: value })
+  };
+
+  const onSubmission = async () => {
+    console.log("Logined", loginData)
+    // await UsersApi.register(regData)
+    //   .then(res => {
+    //     navigate("/")
+    //     console.log("Registered", res)
+    //   })
+    //   .catch(e => {
+    //     console.log("User Creation error", e)
+    //   });
+  };
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -43,7 +49,7 @@ const Login = () => {
                         <CInputGroupText>
                           <CIcon icon={cilUser} />
                         </CInputGroupText>
-                        <CFormInput placeholder="Username" autoComplete="username" />
+                        <CFormInput placeholder="Username" autoComplete="username" onChange={e => loginDataUpdate("username", e.target.value)} />
                       </CInputGroup>
 
                       <CInputGroup className="mb-4">
@@ -54,12 +60,13 @@ const Login = () => {
                           type="password"
                           placeholder="Password"
                           autoComplete="current-password"
+                          onChange={e => loginDataUpdate("password", e.target.value)}
                         />
                       </CInputGroup>
 
                       <CRow>
                         <CCol xs={6}>
-                          <CButton color="success" className="px-4">
+                          <CButton color="success" className="px-4" onClick={onSubmission}>
                             Login
                           </CButton>
                         </CCol>
