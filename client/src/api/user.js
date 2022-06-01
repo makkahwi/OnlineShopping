@@ -3,7 +3,7 @@ import api from ".";
 const path = "/user";
 
 const register = (data) => {
-  return api.post(`/auth/local/register`, data);
+  return api.post(`/api/auth/local/register`, data);
 };
 
 const signIn = data => {

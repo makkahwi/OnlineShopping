@@ -2,17 +2,27 @@ import { cilCopy, cilHome, cilLockLocked, cilUser, cilUserFollow, cilUserPlus } 
 import CIcon from '@coreui/icons-react'
 import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 import React, { useState } from 'react'
-
+import UsersApi from "../../api/user"
+import { useNavigate } from "react-router-dom";
 export default function Registeration() {
+
+  const navigate = useNavigate();
 
   const [regData, setRegData] = useState({})
 
   const onSubmission = async () => {
-    console.log("reg", regData)
+    await UsersApi.register(regData)
+      .then(res => {
+        navigate("/")
+        console.log("Registered", res)
+      })
+      .catch(e => {
+        console.log("User Creation error", e)
+      });
   };
 
   const regDataUpdate = (key, value) => {
-    setRegData(data => ({ ...data, [key]: value }))
+    setRegData({ ...regData, [key]: value })
   };
 
   return (
@@ -31,19 +41,19 @@ export default function Registeration() {
                     <CInputGroupText>
                       <CIcon icon={cilUserPlus} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Username" autoComplete="username" onChange={e => regDataUpdate("username", e.target.value)} />
+                    <CFormInput required placeholder="Username" name="username" onChange={e => regDataUpdate("username", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Name" autoComplete="name" onChange={e => regDataUpdate("name", e.target.value)} />
+                    <CFormInput required placeholder="Name" name="name" onChange={e => regDataUpdate("name", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>@</CInputGroupText>
-                    <CFormInput placeholder="Email" type="email" autoComplete="email" onChange={e => regDataUpdate("email", e.target.value)} />
+                    <CFormInput required placeholder="Email" type="email" name="email" onChange={e => regDataUpdate("email", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
@@ -53,7 +63,7 @@ export default function Registeration() {
                     <CFormInput
                       type="password"
                       placeholder="Password"
-                      autoComplete="new-password"
+                      name="new-password"
                       onChange={e => regDataUpdate("password", e.target.value)}
                     />
                   </CInputGroup>
@@ -65,7 +75,7 @@ export default function Registeration() {
                     <CFormInput
                       type="password"
                       placeholder="Repeat password"
-                      autoComplete="new-password"
+                      name="new-password"
                       onChange={e => regDataUpdate("secpassword", e.target.value)}
                     />
                   </CInputGroup>
@@ -89,33 +99,33 @@ export default function Registeration() {
                     <CInputGroupText>
                       <CIcon icon={cilUserFollow} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Username" autoComplete="username" onChange={e => regDataUpdate("username", e.target.value)} />
+                    <CFormInput required placeholder="Username" name="username" onChange={e => regDataUpdate("username", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Shop Name" autoComplete="name" onChange={e => regDataUpdate("name", e.target.value)} />
+                    <CFormInput required placeholder="Shop Name" name="name" onChange={e => regDataUpdate("name", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilHome} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Shop Address" autoComplete="address" onChange={e => regDataUpdate("address", e.target.value)} />
+                    <CFormInput required placeholder="Shop Address" name="address" onChange={e => regDataUpdate("address", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilCopy} />
                     </CInputGroupText>
-                    <CFormInput placeholder="Logo Image Link" autoComplete="logo" onChange={e => regDataUpdate("logo", e.target.value)} />
+                    <CFormInput required placeholder="Logo Image Link" name="logo" onChange={e => regDataUpdate("logo", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
                     <CInputGroupText>@</CInputGroupText>
-                    <CFormInput placeholder="Email" type="email" autoComplete="email" onChange={e => regDataUpdate("email", e.target.value)} />
+                    <CFormInput required placeholder="Email" type="email" name="email" onChange={e => regDataUpdate("email", e.target.value)} />
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">
@@ -125,7 +135,7 @@ export default function Registeration() {
                     <CFormInput
                       type="password"
                       placeholder="Password"
-                      autoComplete="new-password"
+                      name="new-password"
                       onChange={e => regDataUpdate("password", e.target.value)}
                     />
                   </CInputGroup>
@@ -137,7 +147,7 @@ export default function Registeration() {
                     <CFormInput
                       type="password"
                       placeholder="Repeat password"
-                      autoComplete="new-password"
+                      name="new-password"
                       onChange={e => regDataUpdate("secpassword", e.target.value)}
                     />
                   </CInputGroup>
