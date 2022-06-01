@@ -36,3 +36,4 @@ You also may take a look at the commit messages to get an impression of the work
 #### Notes
 
 - As for the basket, I'm aware that ideally it should be stored in database, but I just built it redux-based to save time, and to show my ability to work with the important library of Redux. Anyway, it's included in my DB diagram.
+- This is based on [CoreUI React Template](https://coreui.io/react/docs/)
