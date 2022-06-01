@@ -1,6 +1,6 @@
 import api from ".";
 
-const path = "/orders";
+const path = "/api/orders";
 
 const getAll = params => {
   return api.get(`${path}?_sort=created_at:desc`, { params });
@@ -11,11 +11,11 @@ const get = id => {
 };
 
 const create = data => {
-  return api.post(`${path}`, data);
+  return api.post(`${path}`, { data });
 };
 
 const update = (id, data) => {
-  return api.put(`${path}/${id}`, data);
+  return api.put(`${path}/${id}`, { data });
 };
 
 const remove = id => {
