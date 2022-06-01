@@ -3,18 +3,26 @@ import CIcon from '@coreui/icons-react'
 import { CButton, CCard, CCardBody, CCol, CContainer, CForm, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 import React, { useState } from 'react'
 import UsersApi from "../../api/user"
+import StoresApi from "../../api/stores"
 import { useNavigate } from "react-router-dom";
-export default function Registeration() {
 
+export default function Registeration() {
   const navigate = useNavigate();
 
   const [regData, setRegData] = useState({})
 
   const onSubmission = async () => {
     await UsersApi.register(regData)
-      .then(res => {
-        navigate("/")
-        console.log("Registered", res)
+      .then(async (res) => {
+        console.log("res", res)
+        await StoresApi.create({ ...regData, user: res?.user?.id })
+          .then(res => {
+            navigate("/")
+            console.log("Registered")
+          })
+          .catch(e => {
+            console.log("Store Creation error", e)
+          })
       })
       .catch(e => {
         console.log("User Creation error", e)
@@ -81,7 +89,7 @@ export default function Registeration() {
                   </CInputGroup>
 
                   <div className="d-grid">
-                    <CButton color="success" onClick={onSubmission}>Create Shopper Account</CButton>
+                    <CButton color="success" onClick={() => onSubmission()}>Create Shopper Account</CButton>
                   </div>
                 </CForm>
               </CCardBody>

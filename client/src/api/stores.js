@@ -1,6 +1,6 @@
 import api from ".";
 
-const path = "/stores";
+const path = "/api/stores";
 
 const getAll = params => {
   return api.get(`${path}?_sort=created_at:asc`, { params });
