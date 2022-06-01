@@ -19,7 +19,7 @@ const Login = () => {
     await UsersApi.signIn(loginData)
       .then(res => {
         console.log("Logged In")
-        dispatch({ type: 'setJWT', jwtToken: res.jwt })
+        dispatch({ type: 'setJWT', jwtToken: res?.jwt })
       })
       .catch(e => {
         console.log("User Login error", e)
@@ -52,7 +52,7 @@ const Login = () => {
                         <CInputGroupText>
                           <CIcon icon={cilUser} />
                         </CInputGroupText>
-                        <CFormInput placeholder="Username" autoComplete="username" onChange={e => loginDataUpdate("username", e.target.value)} />
+                        <CFormInput placeholder="Username" autoComplete="username" onChange={e => loginDataUpdate("identifier", e.target.value)} />
                       </CInputGroup>
 
                       <CInputGroup className="mb-4">
